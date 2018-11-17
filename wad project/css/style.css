@@ -1,0 +1,133 @@
+/************************************HEADER START*********************************/
+/*body{*/
+    /*max-width: 1366px;*/
+/*}*/
+
+ul.topnav1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: "Calibri Light";
+    max-height: 52px;
+}
+
+/*.container{*/
+  /*margin-right: auto;*/
+  /*margin-left: auto;*/
+  /*max-width: 2000px; !* or 950px *!*/
+/*}*/
+
+ul.topnav1 li {
+    float: left;
+}
+
+ul.topnav1 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav1 li a:hover {
+    background-color: #111;
+}
+
+ul.topnav1 li a.active {
+    background-color: #4CAF50;
+}
+
+li.dropdown1 {
+    display: inline-block;
+}
+
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.dropdown1-content a {
+    color: white;
+    padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown1-content a:hover {
+    background-color: grey;
+}
+
+.dropdown1:hover .dropdown1-content {
+    display: block;
+    z-index: 1;
+}
+
+.topnav1 .search-container{
+    float:right;
+}
+
+.topnav1 input[type=text]{
+    padding: 5px;
+    margin-top: 10px;
+    border: none;
+}
+
+.topnav1 .search-container button{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    float: none;
+    padding: 5px;
+    cursor: pointer;
+    margin: 10px;
+    margin-left: auto;
+}
+
+#headerimg{
+    width: 100%;
+}
+
+/************************************HEADER END*********************************/
+
+
+/************************************FOOTER START*********************************/
+.footer-mailchimp{
+    min-height: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    background-color: #2e2d2d;
+}
+
+#mc_embed_signup{
+    margin-left: auto;
+    margin-right: auto;
+    align-items:center;
+    max-width: 500px;
+}
+
+.footer-mailchimp .container h5
+{
+    min-height: 60px;
+    text-align: center;
+    color: lightgrey;
+    padding-top: 20px;
+}
+
+#mc-embedded-subscribe{
+    background-color: white;
+    color: #1d2124;
+    border-radius: 0;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 11px;
+}
+/************************************FOOTER END*********************************/
