@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
 
 
-        <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -37,43 +37,73 @@
 
     <div class="row">
         <div class="col">
-        <ul class="topnav1">
-            <li><a class="active" href="#home"><i class="fas fa-home"></i>  Home</a></li>
-            <li><a href="#news"><i class="fas fa-newspaper"></i>  News</a></li>
-            <li><a href="#contact"><i class="fas fa-phone"></i>  Contact</a></li>
-            <li><a href="#about"><i class="fas fa-users"></i>  About</a></li>
-            <li class="dropdown1">
-                <a href="#menu" class="dropbtn">More <i class="fas fa-caret-down"></i></a>
-                <div class="dropdown1-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+            <ul class="topnav1">
+                <li><a class="active" href="#home"><i class="fas fa-home"></i>  Home</a></li>
+                <li><a href="#news"><i class="fas fa-newspaper"></i>  News</a></li>
+                <li><a href="#contact"><i class="fas fa-phone"></i>  Contact</a></li>
+                <li><a href="#about"><i class="fas fa-users"></i>  About</a></li>
+                <li class="dropdown1">
+                    <a href="#menu" class="dropbtn">More <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown1-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <div class="search-container d-block">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i> </button>
+                    </form>
                 </div>
-            </li>
-            <div class="search-container d-block">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i> </button>
-                </form>
-            </div>
-        </ul>
+            </ul>
         </div>
-    </div>
-
-    <!--HEADER IMAGE OR ANIMATION-->
-    <div class="row">
-       <div class="col"><img src="images\header_image.jpg" id="headerimg"></div>
     </div>
     <!--************************************HEADER END*********************************-->
 
 
     <!--************************************CONTENT START*********************************-->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 style="font-family: 'Dancing Script', cursive;"><Welcom></Welcom>Welcome to RESERVEit</h1>
+
+    <div class="row no-gutters">
+        <div class="col-lg" style="background-color: #2e2d2d;">
+            <div class="container text-center abt_us">
+                <h1>Who we are?</h1>
+                <h5>We are students of University of Central Punjab Lahore</h5>
+            </div>
+        </div>
+
+        <div class="col-lg" style="background-color: #2e2d2d">
+            <div class="container text-center abt_us">
+                <h1>What makes us different?</h1>
+                <h5>This gives us a clear role and responsibility within the business community. We help companies to grow with confidence.</h5>
+            </div>
+        </div>
+
+        <div class="col-lg" style="background-color: #2e2d2d">
+            <div class="container text-center abt_us">
+                <h1>Why are we doing this?</h1>
+                <h5>We are doing this for Web Application Development assignment and project</h5>
+            </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-lg">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!--************************************CONTENT END*********************************-->
+
 
 
     <!--SUBSCRIBE BOX-->
@@ -143,10 +173,8 @@
                 Copyright © 2018-2050 - All rights reserved.
             </div>
         </div>
-
     </div>
     <!--FOOTER END-->
-
     <!--END-->
 </div>
 
