@@ -1,0 +1,104 @@
+
+.contact_title
+{
+	text-align: center;
+	padding: 20px;
+	font-family: 'Pacifico', cursive;
+}
+.contact_us_container
+{
+	background-image: url(http://medias.photodeck.com/acc95870-8e22-4309-9b95-8f5bdf055934/_DSC8746_1_uxga.jpg);
+	height: 450px;
+}
+.form_container
+{
+	display: inline-block;
+	float: left;
+}
+.contact_form
+{
+	margin-top: 30px;
+	padding: 20px;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.contact_input
+{
+	margin: 4px;
+	width: 98%;
+	border: solid black 1px;
+	padding: 6px;
+
+
+}
+.contact_input:focus
+{
+	border: solid 2px black;
+}
+.contact_form > h4
+{
+	text-align: center;	
+	color:white;
+	font-size: 25px;
+}
+.contact_text_area
+{
+	margin: 3px;
+	width: 98%;
+	border: solid black 1px;
+	padding: 6px;
+	height: 120px;	
+	
+}
+.contact_text_area:focus
+{
+	border: solid 2px black;
+}
+.submit_button
+{
+	width: 98%;
+	background-color: rgba(240,240,240,0.4);
+	margin: 3px;
+	border: solid black 1px;
+	padding: 5px;
+	color: white;
+}
+.submit_button:hover
+{
+	background-color: rgba(230,230,230,0.7);
+	color: black;
+}
+.contact_details
+{
+	
+	display: inline;
+	float: right;
+	color : black;
+	padding: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: rgb(240,240,240);
+	
+}
+.contact_details > h4
+{
+	text-align: center;	
+	font-size: 25px;
+}
+.contact_details_row
+{
+	padding-top: 30px;
+}
+
+.map_container
+{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+.container-fluid
+{
+	margin:0px;
+	padding: 0px;
+}
+
