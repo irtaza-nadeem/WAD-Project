@@ -1,0 +1,348 @@
+/************************************HEADER START*********************************/
+/*body{*/
+    /*max-width: 1366px;*/
+/*}*/
+
+ul.topnav1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: "Calibri Light";
+    max-height: 52px;
+}
+
+/*.container{*/
+  /*margin-right: auto;*/
+  /*margin-left: auto;*/
+  /*max-width: 2000px; !* or 950px *!*/
+/*}*/
+
+ul.topnav1 li {
+    float: left;
+}
+
+ul.topnav1 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav1 li a:hover {
+    background-color: #111;
+}
+
+ul.topnav1 li a.active {
+    background-color: indianred;
+}
+
+li.dropdown1 {
+    display: inline-block;
+}
+
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.dropdown1-content a {
+    color: white;
+    padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown1-content a:hover {
+    background-color: grey;
+}
+
+.dropdown1:hover .dropdown1-content {
+    display: block;
+    z-index: 1;
+}
+
+.topnav1 .search-container{
+    float:right;
+    margin-right: 15px;
+}
+
+.topnav1 input[type=text]{
+    padding: 5px;
+    margin-top: 10px;
+    border: none;
+}
+
+.topnav1 .search-container button{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    float: none;
+    padding: 5px;
+    cursor: pointer;
+    margin: 10px;
+    margin-left: auto;
+}
+
+#headerimg{
+    width: 100%;
+}
+
+/************************************HEADER END*********************************/
+
+
+/************************************FOOTER START*********************************/
+.footer-mailchimp{
+    min-height: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    background-color: #2e2d2d;
+}
+
+#mc_embed_signup{
+    margin-left: auto;
+    margin-right: auto;
+    align-items:center;
+    max-width: 500px;
+}
+
+.footer-mailchimp .container h5
+{
+    min-height: 60px;
+    text-align: center;
+    color: lightgrey;
+    padding-top: 20px;
+}
+
+#mc-embedded-subscribe{
+    background-color: #007bff;
+    color: #1d2124;
+    border-radius: 0;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 12px;
+    border: 0;
+}
+/************************************FOOTER END*********************************/
+
+.footer
+{
+    padding: 0px 0 0;
+    color: #d7d7d7;
+}
+.website-name
+{
+    align-items: center;
+}
+.leftsidebar
+{
+    float: none;
+    width: auto;
+}
+#main
+{
+    margin-left: 0px;
+}
+.center
+{
+    text-align: center;
+}
+
+.center a
+{
+    text-decoration: none;
+    color: #d7d7d7;
+}
+
+.footer-main
+{
+    background-color: #373737;
+    padding-top: 24px;
+    width: auto;
+    /*padding-right: 20px;*/
+    /*padding-left: 20px;*/
+}
+h2
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+.SD-padding
+{
+    padding-bottom: 10px;
+}
+.decor
+{
+    margin: 0 0 16px;
+    border-bottom: 1px solid whitesmoke;
+}
+.my-small-text
+{
+    font-size: 15px;
+    font-weight: 300;
+}
+ul
+{
+    list-style-type: none;
+    padding-left: 0px;
+}
+.footer-main-end
+{
+    padding-bottom: 20px;
+}
+.footer-copyright
+{
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #212121;
+}
+.copyright-font
+{
+    font-size: 12px;
+    font-weight: 100;
+}
+.footer-copyright i
+{
+    font-size: 25px;
+    color: #666;
+    cursor:pointer;
+}
+.footer-copyright-end
+{
+    padding-bottom: 15px;
+    padding-top: 15px
+}
+.screen-only
+{
+    display: block;
+}
+.mobile-only
+{
+    display: none;
+}
+
+.footer-copyright .icon{
+    padding-top: 10px;
+}
+
+.abt_us{
+    background-color: #2e2d2d;
+    color: lightgrey;
+    padding: 20px;
+}
+
+.row.no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+
+
+{box-sizing: border-box}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    height: auto;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+/* Set a style for the submit/register button */
+.registerbtn {
+    background-color: indianred;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+    color: indianred;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+.note {
+    font-size: .8em;
+}
+.btn-primary {
+    color: #fff;
+    background-color: indianred;
+    border-color: indianred;
+}
+.btn-primary:hover{
+    color: #fff;
+    background-color: rgb(209, 120, 120);
+    border-color: indianred;
+}
+
+.links nav{
+    background: url('../images/header_image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 150px;
+}
+.links nav .breadcrumb{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    min-height: 150px;
+}
+.links nav .breadcrumb-item a, .links nav .breadcrumb-item{
+    color: white;
+}
+.links .breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: white;
+    content: "/";
+}
