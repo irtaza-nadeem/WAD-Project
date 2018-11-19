@@ -1,0 +1,368 @@
+
+{
+ margin: auto;
+padding: 0px;
+
+
+}
+
+
+
+.headingdiv
+{
+    width: 100%;
+    height: 18%;
+    background-color: white;
+    margin-top: 12px;
+
+
+}
+
+
+.bar
+{
+
+
+
+    width: 100%;
+    height: 30%;
+    background-color: #2B2C2D;
+    margin-top: -20px;
+padding-top: 340px;
+
+    text-align: start;
+
+
+}
+
+
+/*
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+
+.bartext {
+    width: 20px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: unset;
+}
+*/
+
+
+
+.bartext
+{
+    width: 100%;
+    height: 30%;
+    background-color: #2B2C2D;
+    margin-top: -350px;
+color: #ebebeb;
+
+font-size: 20px;
+
+    text-decoration-color: #7B68EE;
+
+    word-spacing: 5px;
+
+    text-blink: blue;
+    text-rendering: auto;
+
+    text-effect: engrave;
+
+    background-blink
+
+}
+
+
+
+
+
+
+.firstcell
+{
+
+
+    background-color: white;
+    height: 150px;
+    width: 300px;
+
+
+ margin: 22% 0 0 1%;
+
+    padding-bottom: 350px;
+    padding-left: 7px;
+
+border-top-right-radius: 15%;
+
+border-radius: 15%;
+    border-style: solid;
+
+    font-size: 15px;
+
+    color: #00507C;
+}
+
+
+.secondcell
+
+{
+
+    background-color:  white;
+    height: 150px;
+    width: 300px;
+
+    margin: -22.5% 0 10% 21%;
+
+    padding-bottom: 350px;
+    padding-left: 7px;
+
+    border: #00507C;
+
+    font-size: 15px;
+
+    color: #3F97F9;
+
+
+    border-radius: 15%;
+    border-style: solid;
+
+
+}
+
+.thirdcell
+
+{
+
+
+    background-color:  white;
+    height: 150px;
+    width: 300px;
+
+    margin: -32.5% 0 10% 41%;
+
+    padding-bottom: 350px;
+    padding-left: 7px;
+
+    border: #00507C;
+
+    font-size: 15px;
+
+    color: #3F97F9;
+
+    border-radius: 15%;
+    border-style: solid;
+
+}
+
+
+
+
+
+.fourthcell
+{
+
+
+
+    background-color:  white;
+    height: 150px;
+    width: 300px;
+
+    margin: -32.5% 0 10% 61%;
+
+    padding-bottom: 350px;
+    padding-left: 7px;
+
+    border: #00507C;
+
+    font-size: 15px;
+
+    color: #3F97F9;
+
+    border-radius: 15%;
+    border-style: solid;
+
+}
+
+
+
+
+
+.fifthcell
+{
+
+
+    background-color:  white;
+    height: 150px;
+    width: 300px;
+
+    margin: -32.5% 0 10% 81%;
+
+    padding-bottom: 350px;
+    padding-left: 7px;
+
+    border: #00507C;
+
+    font-size: 15px;
+
+color: #3F97F9;
+
+
+
+    border-radius: 15%;
+    border-style: solid;
+
+}
+
+.whoare
+{
+
+
+    background-color: #2B2C2D;
+
+    height: 130px;
+width: 300px;
+
+
+margin: -53% 0 0 4%;
+
+padding-bottom: 269px;
+padding-left: 7px;
+
+
+
+
+font-size: 21px;
+
+
+
+color: #A0A0A0;
+
+
+}
+
+
+
+
+.h3
+{
+
+    font-size: 35px;
+
+
+}
+
+
+.heading
+{
+    font-size: 40px;
+    margin: 0 0 2% 38%
+}
+
+
+
+
+.makesdiff
+{
+
+
+    background-color: #2B2C2D;
+
+    height: 130px;
+    width: 300px;
+
+
+    margin: -64% 0 0 145%;
+
+    padding-bottom: 267px;
+    padding-left: 7px;
+
+
+
+
+    font-size: 21px;
+
+
+
+    color: #A0A0A0;
+
+}
+
+.why
+{
+    background-color: #2B2C2D;
+
+    height: 130px;
+    width: 300px;
+
+
+    margin: -85% 0 0 165%;
+
+    padding-bottom: 267px;
+    padding-left: 7px;
+
+
+
+
+    font-size: 21px;
+
+
+
+    color: #A0A0A0;
+
+}
+
+
+.h5{
+
+    font-size: 38px;
+}
+
+
+.h4
+{
+    font-size: 38px;
+}
+
+
+
+.last
+{
+
+
+    width: 5000px;
+    height: 80%;
+    background-color:  #2B2C2D;
+    margin: 170% 0 50% -650%;
+
+
+
+
+    padding-top: 28px;
+    padding-right: -120px;
+
+}
+
+.col-sm-4
+{
+
+
+    margin: -60% 0 0 -170%;
+
+
+font-size: 15px;
+
+}
+
+
+
+img
+{
+    width: 150px;
+    height: 150px;
+    align: left;
+}
