@@ -314,25 +314,6 @@ ul
 
 
 
-/*{box-sizing: border-box}*/
-
-
-/* Full-width input fields */
-/*input[type=text], input[type=password] {*/
-    /*width: 100%;*/
-    /*padding: 15px;*/
-    /*margin: 5px 0 22px 0;*/
-    /*display: inline-block;*/
-    /*border: none;*/
-    /*background: #f1f1f1;*/
-    /*height: auto;*/
-/*}*/
-
-/*input[type=text]:focus, input[type=password]:focus {*/
-    /*background-color: #ddd;*/
-    /*outline: none;*/
-/*}*/
-
 /************************************FOOTER END*********************************/
 
 /* Set a style for the submit/register button */
@@ -541,15 +522,7 @@ img
     padding: 0px 0px 0px 0px;
     text-align: left;
 }
-/*input*/
-/*{*/
-    /*width: 100%;*/
-    /*padding: 12px 20px;*/
-    /*margin: 8px 0;*/
-    /*box-sizing: border-box;*/
-    /*border: none;*/
-    /*border-bottom: 1px solid #373737;*/
-/*}*/
+
 .fp-text
 {
     font-size: 15px;
