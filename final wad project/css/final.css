@@ -30,14 +30,14 @@ div.icon{
     text-align: center;
 }
 
-.fas .fa-lock{
-    font-size: 60px;
-}
+/*.fas .fa-lock{*/
+    /*font-size: 60px;*/
+/*}*/
 
-.card-body .fas{
-    font-size: 80px;
-    color: darkgrey;
-}
+/*.card-body .fas{*/
+    /*font-size: 80px;*/
+    /*color: darkgrey;*/
+/*}*/
 
 .card-body ,.icon{
     text-align: center;
@@ -189,7 +189,7 @@ li.dropdown1 {
     border-bottom-right-radius: 7px;
     border-top-right-radius: 7px;
     padding: 12px;
-    margin-top: 6px;
+    margin-top: 0px;
     border: 0;
 }
 
@@ -503,7 +503,7 @@ tahreem*/
 {
     border: 1px solid #E8E8E8;
     border-radius: 12px;
-    width: fit-content;
+    /*width: fit-content;*/
     margin: auto;
     padding: 48px 40px 36px 36px;
     background-color: #ffffff;
