@@ -12,9 +12,7 @@ if(isset($_POST['insert_pro'])){
         header("Location: insert_restaurant.php");
     }
     else{
-        echo "<script type=\"text/javascript\">
-            alert (\"Login Error\");
-    </script>";
+        echo "<script type=\"text/javascript\"> alert (\"Login Error\"); </script>";
     }
 }
 ?>
