@@ -26,7 +26,7 @@ require_once "server/functions.php";
 <body>
 
 <!-- ****************************HEADER BEGINS HERE*****************************-->
-<div class="container">
+<div class="container-fluid px-3">
     <!--LOGO-->
     <div class="row mb-3 mb-sm-0">
         <div class="col-sm-6">
@@ -71,8 +71,8 @@ require_once "server/functions.php";
             <h1 class="contact_title">Contact Us</h1>
         </div>
     </div>
-    <div class="row">
-        <div class="col contact_us_container m-0">
+    <div class="row container-fluid">
+        <div class="col contact_us_container m-0 ">
             <div class="form_container col-lg-5 col-md-6 col-sm-12 col-xs-12" >
 
                 <form class="contact_form" >
@@ -89,7 +89,7 @@ require_once "server/functions.php";
 
         </div>
     </div>
-    <div class="row">
+    <div class="row container-fluid">
         <div class="contact_details col-lg-4 col-md-6 col-sm-12 col-xs-12">
             <h4 >Contact Details</h4>
             <hr>

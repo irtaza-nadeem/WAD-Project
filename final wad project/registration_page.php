@@ -19,7 +19,7 @@
 <body>
 
 <!--************************************HEADER START*********************************-->
-<div class="container">
+<div class="container-fluid px-3">
     <!--LOGO-->
     <div class="row mb-3 mb-sm-0">
         <div class="col-sm-6">
@@ -81,7 +81,7 @@
 
 
     <section class="register">
-        <div class="container my-3 my-md-5">
+        <div class="container-fluid px-3 my-3 my-md-5">
             <div class="row">
                 <div class="col-12">
                     <h1>Register</h1>
@@ -155,7 +155,7 @@
 
 
     <!--FOOTER START-->
-    <div class="footer center container-fluid px-3">
+    <div class="footer center container-fluid">
         <div class="row m-0 footer-main" >
             <div class="col-lg-6 col" style="margin-left: 0">
                 <div>

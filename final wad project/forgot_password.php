@@ -24,7 +24,7 @@ require_once "server/functions.php";
 <body>
 
 <!--************************************HEADER START*********************************-->
-<div class="container">
+<div class="container-fluid px-3">
     <!--LOGO-->
     <div class="row mb-3 mb-sm-0">
         <div class="col-sm-6">
