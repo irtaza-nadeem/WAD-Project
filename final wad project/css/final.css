@@ -184,10 +184,9 @@ li.dropdown1 {
 
 #mc-embedded-subscribe{
     background-color: #007bff;
-    color: #1d2124;
-    border-radius: 0;
-    border-bottom-right-radius: 7px;
-    border-top-right-radius: 7px;
+    color: white;
+    width: 200px;
+    border-radius: 10px;
     padding: 12px;
     margin-top: 0px;
     border: 0;
