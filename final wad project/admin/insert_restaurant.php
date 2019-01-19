@@ -40,7 +40,7 @@ if(isset($_POST['insert_pro'])){
 <body>
 <div class="container">
     <h1 class="text-center my-4"> <span class="d-none d-sm-inline"> Add New </span> Restaurant </h1>
-    <form action="insert_product.php" method="post" enctype="multipart/form-data">
+    <form action="insert_restaurant.php.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
                 <label for="pro_title" class="float-md-right"> <span class="d-sm-none d-md-inline"> Restaurant </span> Title:</label>
