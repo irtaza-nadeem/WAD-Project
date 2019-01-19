@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+require_once "server/functions.php";
+?>
 <head>
     <meta charset="UTF-8">
     <title>Restaurant Reservation System</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
