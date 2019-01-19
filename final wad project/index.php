@@ -29,8 +29,8 @@
         </div>
         <div class="col-sm-6 text-center text-sm-right">
             <div class="btn-group mt-sm-2">
-                <div class="mx-2"><a href="registration_page.html" class="btn btn-primary px-3">Sign up</a></div>
-                <div class="mx-2"><a href="signin.html" class="btn btn-secondary px-3">Login</a></div>
+                <div class="mx-2"><a href="registration_page.php" class="btn btn-primary px-3">Sign up</a></div>
+                <div class="mx-2"><a href="signin.php" class="btn btn-secondary px-3">Login</a></div>
             </div>
         </div>
     </div>
@@ -39,10 +39,10 @@
     <div class="row">
         <div class="col">
             <ul class="topnav1">
-                <li><a class="active" href="index.html"><i class="fas fa-home"></i>  Home</a></li>
+                <li><a class="active" href="index.php"><i class="fas fa-home"></i>  Home</a></li>
                 <li><a href="#news"><i class="fas fa-newspaper"></i>  News</a></li>
-                <li><a href="contact_us.html"><i class="fas fa-phone"></i>  Contact</a></li>
-                <li><a href="about.html"><i class="fas fa-users"></i>  About</a></li>
+                <li><a href="contact_us.php"><i class="fas fa-phone"></i>  Contact</a></li>
+                <li><a href="about.php"><i class="fas fa-users"></i>  About</a></li>
                 <li class="dropdown1">
                     <a href="#menu" class="dropbtn">More <i class="fas fa-caret-down"></i></a>
                     <div class="dropdown1-content">
