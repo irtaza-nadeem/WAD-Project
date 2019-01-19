@@ -22,7 +22,7 @@ require_once "server/functions.php";
 <body>
 
 <!--************************************HEADER START*********************************-->
-<div class="container">
+<div class="container-fluid px-3">
     <div class="row mb-3 mb-sm-0">
         <div class="col-sm-6">
             <h1 class="text-center text-sm-left" style="font-family: 'Pacifico', cursive;">RESERVEit </h1>
