@@ -255,7 +255,6 @@ require_once "server/functions.php";
     <!--FOOTER END-->
     <!--END-->
 </div>
-
-
+<script src="js/script.js"></script>
 </body>
 </html>

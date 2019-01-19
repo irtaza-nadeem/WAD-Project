@@ -90,19 +90,19 @@
 
                 <div class="col-md-6">
                     <label><i class="fas fa-user"> </i><b> Firstname</b></label>
-                    <input type="text" class="form-control" placeholder="Enter firstname" name="name" required>
+                    <input type="text" class="form-control" name="fname" "placeholder="Enter firstname" name="name" required>
                 </div>
 
                 <div class="col-md-6">
                     <label><i class="fas fa-users"></i><b> Lastname</b></label>
-                    <input type="text" class="form-control" placeholder="Enter lastname" name="name" required>
+                    <input type="text" class="form-control" name="lname" placeholder="Enter lastname" name="name" required>
                 </div>
 
 
                 <div class="form-group col-md-6">
                     <div class="select-list">
                         <label><i class="fas fa-transgender"></i><b> Gender</b></label>
-                        <select type="text" id="text" class="form-control" required>
+                        <select type="text" id="text" name="g" class="form-control" required>
                             <option value=""></option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -113,19 +113,17 @@
 
                 <div class="col-md-6">
                     <label for="Date"><i class="fas fa-clock"></i><b> Date of Birth:</b></label>
-                    <input type="date" id="start" name="trip-start" class="form-control"
-                            value="2018-07-22"
-                            min="1990-01-01" max="2018-12-31">
+                    <input type="date" id="start" name="trip-start" class="form-control">
                 </div>
 
                 <div class="col-12">
                     <label for="email"><i class="fas fa-envelope"></i><b> Email</b></label>
-                    <input type="text" class="form-control" placeholder="Enter Email" name="email" required>
+                    <input type="text" class="form-control" name="email" placeholder="Enter Email" name="email" required>
                 </div>
 
                 <div class="col-md-6">
                     <label for="psw"><i class="fas fa-key"></i><b> Password</b></label>
-                    <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                    <input type="password" class="form-control" name="pw" placeholder="Enter Password" name="psw" required>
                 </div>
 
                 <div class="col-md-6">
@@ -137,7 +135,7 @@
                     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
                 </div>
                 <div class="col-md-8 mx-auto">
-                    <button type="submit" class="registerbtn btn">Register</button>
+                    <input type="button" class="registerbtn btn" value="Register" name="reg_data" onclick="processString()">
                 </div>
                 <div class="col-12">
                     <div class="signin py-3 mt-2">
@@ -208,5 +206,6 @@
     <!--<script src="js/popper.js"></script>-->
     <!--<script src="js/bootstrap.js"></script>-->
 </div>
+<script src="js/script.js"></script>
 </body>
 </html>
