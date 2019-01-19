@@ -2,17 +2,28 @@
 require_once "../server/db_connection.php";
 $username = "root";
 $password = "root";
-if(isset($_POST['insert_pro'])){
-    //getting text data from the fields
+$u = "";
+$p = "";
+
+if(isset($_POST['insert_pro']))
+{
+    $u = "";
+    $p = "";
     $user = $_POST['admin_user'];
     $pass = $_POST['admin_password'];
 
+    if(empty(trim($user)))
+    {
+        $u = "<b>Username Required</b>";
+    }
+    if(empty(trim($pass)))
+    {
+        $p = "<b>Password Required</b>";
+    }
+
     if((strcmp($username, $user) == 0) && (strcmp($password, $pass) == 0))
     {
-        header("Location: insert_restaurant.php");
-    }
-    else{
-        echo "<script type=\"text/javascript\"> alert (\"Login Error\"); </script>";
+        header("Location: menu.php");
     }
 }
 ?>
@@ -30,26 +41,21 @@ if(isset($_POST['insert_pro'])){
             font-family: 'Old Standard TT', serif;
         }
     </style>
-    <script type="javascript">
-        function a()
-        {
-            alert ("Login Error");
-        }
-    </script>
 </head>
 <body>
 <div class="container">
     <h1 class="text-center my-4"> <span class="d-none d-sm-inline"> Admin </span> Login </h1>
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="index.php" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-4 mt-auto">
                 <label for="admin_username" class="float-md-right"> <span class="d-sm-none d-md-inline"> Username: </span></label>
             </div>
             <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
                 <div class="input-group">
-                    <input type="text" class="form-control" id="pro_title" name="admin_user" placeholder="Admin Username" >
+                    <input type="text" class="form-control" id="pro_title" name="admin_user" placeholder="Admin Username">
                 </div>
             </div>
+            <span><?php echo $u; ?></span>
         </div>
 
         <div class="row my-3">
@@ -61,6 +67,7 @@ if(isset($_POST['insert_pro'])){
                     <input class="form-control" id="pro_price" name="admin_password" placeholder="Admin Password">
                 </div>
             </div>
+            <span><?php echo $p; ?></span>
         </div>
 
         <div class="row my-3">
