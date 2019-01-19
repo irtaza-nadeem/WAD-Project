@@ -98,7 +98,6 @@ require_once "server/functions.php";
     <!--************************************CONTENT END*********************************-->
 
 
-
     <!--SUBSCRIBE BOX-->
     <div class="row">
         <div class="col">
