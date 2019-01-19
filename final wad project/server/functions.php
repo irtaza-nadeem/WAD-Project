@@ -1,3 +1,8 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+
 <?php
 require_once "db_connection.php";
 
@@ -22,9 +27,9 @@ fareed space*/
 
 
 
-/*saim space
+//saim space
 
-saim space*/
+//saim space*/
 
 
 
