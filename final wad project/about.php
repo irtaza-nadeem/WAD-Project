@@ -1,4 +1,7 @@
 ﻿<!DOCTYPE html>
+<?php
+require_once "server/functions.php";
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
