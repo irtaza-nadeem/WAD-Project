@@ -60,7 +60,6 @@ function showNews()
             <br>
         ";
     }
-
 }
 ?>
 

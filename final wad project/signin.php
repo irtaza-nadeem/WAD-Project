@@ -42,7 +42,7 @@ require_once "server/functions.php";
         <div class="col">
             <ul class="topnav1">
                 <li><a class="active" href="index.php"><i class="fas fa-home"></i>  Home</a></li>
-                <li><a href="#news"><i class="fas fa-newspaper"></i>  News</a></li>
+                <li><a href="news.php"><i class="fas fa-newspaper"></i>  News</a></li>
                 <li><a href="contact_us.php"><i class="fas fa-phone"></i>  Contact</a></li>
                 <li><a href="about.php"><i class="fas fa-users"></i>  About</a></li>
                 <li class="dropdown1">

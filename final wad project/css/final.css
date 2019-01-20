@@ -167,6 +167,12 @@ li.dropdown1 {
     /*margin: 10px;*/
     box-shadow:2px 1px 6px 2px #c9d8e4;
 }
+.f_newsfield
+{
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
 
 /*************content area end*************/
 

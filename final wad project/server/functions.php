@@ -38,11 +38,35 @@ irtaza space*/
 
 
 
-/*fareed space
-
-fareed space*/
+/*fareed space*/
 
 
+function getnews()
+{
+
+    global $con;
+    $show_n = "select * from news;";
+    $show_news = mysqli_query($con, $show_n);
+
+    while($row=mysqli_fetch_assoc($show_news)){
+        $news_id = $row['id'];
+        $news = $row['news'];
+        echo
+        "
+            <div class=\"row f_newsfield\">
+                <div class=\"d-sm-block col-md-2 col-lg-1 col-xl-1\">
+                    <label for=\"editnews\" class=\"float-md-right\"> <span class=\"d-sm-none d-md-inline\"> News: </span></label>
+                </div>
+                
+                <div class=\"col-sm-12 col-md-10 col-lg-10 col-xl-10\">
+                    <pre class=\"form-control\" type=\"file\" id=\"ins_news\" name=\"edit_news\">$news</pre>
+                </div>
+            </div>
+        ";
+    }
+}
+
+/*fareed space*/
 
 
 //saim space
