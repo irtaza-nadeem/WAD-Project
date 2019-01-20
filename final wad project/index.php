@@ -78,6 +78,12 @@ require_once "server/functions.php";
             <h1 style="font-family: 'Dancing Script', cursive;"><Welcom></Welcom>Welcome to RESERVEit</h1>
         </div>
     </div>
+
+    <article id="content" class="container-fluid bg-white">
+        <?php echo "content area"; ?>
+        <!--admin walay bando ka kam ha dont touch plzzzzzz-->
+    </article>
+    <br>
     <!--************************************CONTENT END*********************************-->
 
 

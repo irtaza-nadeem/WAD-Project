@@ -158,6 +158,19 @@ li.dropdown1 {
 /************************************HEADER END*********************************/
 
 
+/*************content area*************/
+
+#content {
+    width: 100%;
+    min-height: 70vh;
+    transition: all 0.3s;
+    /*margin: 10px;*/
+    box-shadow:2px 1px 6px 2px #c9d8e4;
+}
+
+/*************content area end*************/
+
+
 /************************************FOOTER START*********************************/
 .footer-mailchimp{
     min-height: 150px;
