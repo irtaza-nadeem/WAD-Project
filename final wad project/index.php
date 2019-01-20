@@ -55,9 +55,9 @@ require_once "server/functions.php";
                     </div>
                 </li>
                 <div class="search-container">
-                    <form action="/action_page.php">
+                    <form>
                         <input type="text" placeholder="Search.." name="search">
-                        <button type="submi"><i class="fa fa-search"></i> </button>
+                        <button type="submit"><i class="fa fa-search"></i> </button>
                     </form>
                 </div>
 
