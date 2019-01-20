@@ -47,6 +47,30 @@ fareed space*/
 
 //saim space
 
+
+function data_exits_or_not()
+{
+    global $con;
+    if(isset($_POST['login']))
+    {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $query="select email,password from registration where email=$email AND password=$password ";
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
 //saim space*/
 
 

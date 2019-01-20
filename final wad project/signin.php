@@ -105,8 +105,16 @@ require_once "server/functions.php";
                 </div>
 
                 <div class="col-auto">
-                    <input class="btn btn-primary" type="submit" name="login" value="Login">
+                    <input class="btn btn-primary" type="submit" name="login" value="Login" onclick="datacheck()">
                 </div>
+
+                <div>
+                    <p id="s">
+
+
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>

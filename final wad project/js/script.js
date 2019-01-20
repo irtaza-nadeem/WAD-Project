@@ -40,6 +40,18 @@ fareed space*/
 
 //saim space
 
+
+function datacheck() {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+
+    document.getElementById('s').innerHTML = "<td>" + email + "</td>" + "<td>" + password;
+
+
+}
+
+
 //saim space*/
 
 
