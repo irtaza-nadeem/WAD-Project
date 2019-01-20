@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-    require_once "server/functions.php";
+require_once "server/functions.php";
 ?>
 <html lang="en">
 <head>
@@ -133,9 +133,14 @@
                 </div>
                 <div class="col-md-8 mx-auto">
                     <input type="button" class="registerbtn btn" value="Register" name="reg_data" onclick="processString()">
+                    <div id="data">
+                        <?php setdata(); ?>
+                    </div>
                 </div>
-                <div>
-                    <p id="p"></p>
+                <div class="col-12">
+                    <div>
+                        <p id="para" align="center"></p>
+                    </div>
                 </div>
                 <div class="col-12">
                     <div class="signin py-3 mt-2">
