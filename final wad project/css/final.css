@@ -146,8 +146,6 @@ li.dropdown1 {
     width: 100%;
 }
 
-
-
 /************************************HEADER END*********************************/
 
 
@@ -278,6 +276,23 @@ a.article:hover {
     padding-left: 0px;
     padding-right: 0px;
 }
+
+.res-summary {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.res-summary:hover {
+    box-shadow: 1px 1px 5px 1px indianred;
+}
+
+.res-summary img {
+    width: 180px;
+    height: 180px;
+}
+
 
 /*************content area end*************/
 
