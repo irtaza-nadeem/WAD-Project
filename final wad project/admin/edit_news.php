@@ -43,6 +43,7 @@ function showNews()
                     <button type=\"submit\" name=\"delete_n\" class=\"btn btn-danger btn-block\">Delete</button>
                 </div>
             </div>
+            <br>
         ";
     }
 }
