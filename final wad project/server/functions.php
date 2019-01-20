@@ -137,7 +137,7 @@ function data_exits_or_not()
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $query="select email,password from registration where email=$email AND password=$password ";
+        $query="select email,password from registration where email='$email' AND password='$password' ";
 
         $match_data = mysqli_query($con,$query);
 
