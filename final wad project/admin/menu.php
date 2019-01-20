@@ -11,6 +11,11 @@ else if(isset($_POST['insert_news']))
 
     header("Location: insert_news.php");
 }
+else if(isset($_POST['insert_cat']))
+{
+
+    header("Location: insert_category.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +41,7 @@ else if(isset($_POST['insert_news']))
             <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
                 <button type="submit" name="insert_news" class="btn btn-primary btn-block">Add News</button>
                 <button type="submit" name="insert_res" class="btn btn-primary btn-block">Add Restaurant</button>
+                <button type="submit" name="insert_cat" class="btn btn-primary btn-block">Add Restaurant Category</button>
             </div>
         </div>
     </form>
