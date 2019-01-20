@@ -80,7 +80,7 @@ function get_categories()
     while($row = mysqli_fetch_assoc($getCatsResult)){
         $cat_id = $row['id'];
         $cat_title = $row['title'];
-        echo "<li><a class='nav-link'  href='index.php?cat=$cat_id'>$cat_title</a></li>";
+        echo "<li><a class='nav-link text-center'  href='index.php?cat=$cat_id'>$cat_title</a></li>";
     }
 }
 

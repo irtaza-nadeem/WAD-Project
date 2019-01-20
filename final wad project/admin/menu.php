@@ -7,7 +7,7 @@ if(isset($_POST['insert_res']))
 }
 else if(isset($_POST['edit_res']))
 {
-    header("Location: edit_restaurant.php");
+    header("Location: edit_restaurants.php");
 }
 else if(isset($_POST['insert_news']))
 {
