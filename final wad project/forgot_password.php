@@ -79,16 +79,6 @@ require_once "server/functions.php";
                         <div class="input-group">
                             <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
                         </div>
-                        <i class="fas fa-key icon2" style="margin-top: 10px"></i>
-                        <h6 style="display:inline-block"><strong>Password</strong></h6>
-                        <div class="input-group">
-                            <input id="password" name="password" placeholder="password" class="form-control"  type="password">
-                        </div>
-                        <i class="fas fa-check icon2"  style="margin-top: 10px"></i>
-                        <h6 style="display:inline-block"><strong>Confirm Password</strong></h6>
-                        <div class="input-group">
-                            <input id="confirm password" name="confirm password" placeholder="confirm password" class="form-control"  type="password">
-                        </div>
                         <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit"  style="margin-top: 10px">
                     </div>
                 </div>
