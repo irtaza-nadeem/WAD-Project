@@ -25,45 +25,9 @@ require_once "server/functions.php";
 
 <!--************************************HEADER START*********************************-->
 <div class="container-fluid px-3">
-    <!--LOGO-->
-    <div class="row mb-3 mb-sm-0">
-        <div class="col-sm-6">
-            <h1 class="text-center text-sm-left" style="font-family: 'Pacifico', cursive;">RESERVEit </h1>
-        </div>
-        <div class="col-sm-6 text-center text-sm-right">
-            <div class="btn-group mt-sm-2">
-                <div class="mx-2"><a href="registration_page.php" class="btn btn-primary px-3">Sign up</a></div>
-                <div class="mx-2"><a href="signin.php" class="btn btn-secondary px-3">Login</a></div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col">
-            <ul class="topnav1">
-                <li><a class="active" href="index.php"><i class="fas fa-home"></i>  Home</a></li>
-                <li><a href="#news"><i class="fas fa-newspaper"></i>  News</a></li>
-                <li><a href="contact_us.php"><i class="fas fa-phone"></i>  Contact</a></li>
-                <li><a href="about.php"><i class="fas fa-users"></i>  About</a></li>
-                <li class="dropdown1">
-                    <a href="#menu" class="dropbtn">More <i class="fas fa-caret-down"></i></a>
-                    <div class="dropdown1-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </li>
-                <div class="search-container">
-                    <form>
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit"><i class="fa fa-search"></i> </button>
-                    </form>
-                </div>
-
-            </ul>
-        </div>
-    </div>
+    <?php
+    include 'header.php';
+    ?>
 
     <!--HEADER IMAGE OR ANIMATION-->
     <div class="row">
@@ -73,16 +37,28 @@ require_once "server/functions.php";
 
 
     <!--************************************CONTENT START*********************************-->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 style="font-family: 'Dancing Script', cursive;"><Welcom></Welcom>Welcome to RESERVEit</h1>
-        </div>
+    <br>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="bg-light">
+            <ul class="">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="nav-link text-center">
+                        <i class="fas fa-sitemap"></i>
+                        Categories
+                    </a>
+                    <ul class="collapse show list-unstyled" id="homeSubmenu">
+                        <?php get_categories(); ?>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <article id="content" class="container-fluid bg-white">
+            <div class="row align-content-center">
+                <?php get_restaurants(); ?>
+            </div>
+        </article>
     </div>
-
-    <article id="content" class="container-fluid bg-white">
-        <?php echo "content area"; ?>
-        <!--admin walay bando ka kam ha dont touch plzzzzzz-->
-    </article>
     <br>
     <!--************************************CONTENT END*********************************-->
 
@@ -94,7 +70,7 @@ require_once "server/functions.php";
                 <div class="container text-center">
                     <h5>Subscribe to our mailing list to receive an update when new resturant arrive!</h5>
                     <div id="mc_embed_signup">
-                        <form role="form" action="https://startbootstrap.us3.list-manage.com/subscribe/post?u=531af730d8629808bd96cf489&amp;id=afb284632f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate">
+                        <form role="form" action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate">
                             <div class="input-group input-group-lg">
                                 <!--<input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email address...">-->
                                 <span class="input-group-btn" style="margin: auto">
@@ -110,53 +86,12 @@ require_once "server/functions.php";
     <!--SUBSCRIBE BOX END-->
 
     <!--FOOTER START-->
-    <div class="footer center container-fluid">
-        <div class="row m-0 footer-main" >
-            <div class="col-lg-6 col" style="margin-left: 0">
-                <div>
-                    <h2>Website Name</h2>
-                    <div class="decor d-lg-none"></div>
-                </div>
-                <div>
-                    <div class="my-small-text SD-padding">
-                        Slogan Slogan Slogan Slogan
-                    </div>
-                    <div class="decor d-lg-none"></div>
-                </div>
-                <div>
-                    <div class="my-small-text SD-padding">
-                        Deatail Deatail Deatail Deatail Deatail Deatail Deatail Deatail Deatail Deatail Deatail Deatail
-                        Deatail Deatail Deatail
-                    </div>
-                    <div class="decor d-lg-none"></div>
-                </div>
-            </div>
-
-            <div class="center footer-main-end col-lg-6">
-                <div> <h2>Links</h2></div>
-                <ul class="my-small-text">
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Our Team</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-copyright">
-            <div class="icon float-lg-right col-lg-6">
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-google-plus-square"></i>
-                <i class="fab fa-pinterest-square"></i>
-                <i class="fab fa-linkedin"></i>
-            </div>
-            <div class="copyright-font footer-copyright-end col-lg-6">
-                Copyright © 2018-2050 - All rights reserved.
-            </div>
-        </div>
-    </div>
-</div>
+    <?php
+        include 'footer.php';
+    ?>
     <!--FOOTER END-->
+
+</div>
 
     <!--END-->
 

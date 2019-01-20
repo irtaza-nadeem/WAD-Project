@@ -7,7 +7,7 @@ if(isset($_POST['insert_res']))
 }
 else if(isset($_POST['edit_res']))
 {
-    header("Location: edit_restaurant.php");
+    header("Location: edit_restaurants.php");
 }
 else if(isset($_POST['insert_news']))
 {
@@ -46,26 +46,26 @@ else if(isset($_POST['edit_cat']))
     <h1 class="text-center my-4"> <span class="d-none d-sm-inline"> Admin Menu </span> </h1>
     <form action="" method="post" enctype="multipart/form-data">
         <div class="row my-3">
-            <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-4 mt-auto">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-auto" style="padding-bottom: 10px">
                 <button type="submit" name="insert_news" class="btn btn-primary btn-block">Add News</button>
             </div>
-            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <button type="submit" name="edit_news" class="btn btn-primary btn-block">Edit News</button>
             </div>
         </div>
         <div class="row my-3">
-            <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-4 mt-auto">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-auto" style="padding-bottom: 10px">
                 <button type="submit" name="insert_res" class="btn btn-primary btn-block">Add Restaurant</button>
             </div>
-            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <button type="submit" name="edit_res" class="btn btn-primary btn-block">Edit Restaurant</button>
             </div>
         </div>
         <div class="row my-3">
-            <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-4 mt-auto">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-auto" style="padding-bottom: 10px">
                 <button type="submit" name="insert_cat" class="btn btn-primary btn-block">Add Restaurant Category</button>
             </div>
-            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <button type="submit" name="edit_cat" class="btn btn-primary btn-block">Edit Restaurant Category</button>
             </div>
         </div>

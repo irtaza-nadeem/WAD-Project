@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <?php
 require_once "server/functions.php";
+//require_once  "js/script.js";
 ?>
+
 <html lang="en">
 <head>
+    <script src="js/script.js"></script>
     <meta charset="UTF-8">
     <title>Contact Us</title>
 
@@ -45,7 +48,7 @@ require_once "server/functions.php";
         <div class="col">
             <ul class="topnav1">
                 <li><a class="active" href="index.php"><i class="fas fa-home"></i>  Home</a></li>
-                <li><a href="#news"><i class="fas fa-newspaper"></i>  News</a></li>
+                <li><a href="news.php"><i class="fas fa-newspaper"></i>  News</a></li>
                 <li><a href="contact_us.php"><i class="fas fa-phone"></i>  Contact</a></li>
                 <li><a href="about.php"><i class="fas fa-users"></i>  About</a></li>
                 <li class="dropdown1">
@@ -77,11 +80,20 @@ require_once "server/functions.php";
 
                 <form class="contact_form" >
                     <h4 >Write Us</h4>
-                    <input class="contact_input" type="text" name="client_name" placeholder="Name">
-                    <input class="contact_input" type="email" name="client_email" placeholder="Email">
-                    <input class="contact_input" type="text" name="client_number" placeholder="Number">
-                    <textarea class="contact_text_area">Your Message Here</textarea>
-                    <input class="submit_button" type="submit" name="submit" value="Send Message">
+                    <input class="contact_input" type="text" name="client_name" id="client_name" placeholder="Name"  onblur="contactus_name()">
+                    <span class="error_msg" id="name_error_msg"></span>
+
+                    <input class="contact_input" type="email" name="client_email" id="client_email" placeholder="Email"  onblur="contactus_email()">
+                    <span class="error_msg" id="email_error_msg"></span>
+
+                    <input class="contact_input" type="text" name="client_number" id="client_number" placeholder="Number" onblur="contactus_number()">
+                    <span class="error_msg" id="number_error_msg"></span>
+
+                    <textarea class="contact_text_area" id="client_msg" placeholder="Your message here..." onblur="contactus_msg()"></textarea>
+                    <span class="error_msg" id="msg_error_msg"></span>
+
+                    <input class="submit_button" type="submit" name="submit"  value="Refresh Page" onClick="window.location.reload()">
+                    <span class="success_msg" id="msg"></span>
                 </form>
             </div>
 
