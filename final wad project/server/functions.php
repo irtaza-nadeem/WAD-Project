@@ -30,9 +30,26 @@ function setdata()
 
 
 
-/*irtaza space
+//irtaza space
 
-irtaza space*/
+function get_restaurants()
+{
+
+}
+
+function get_categories()
+{
+    global $con;
+    $getCatsQuery = "select * from categories";
+    $getCatsResult = mysqli_query($con,$getCatsQuery);
+    while($row = mysqli_fetch_assoc($getCatsResult)){
+        $cat_id = $row['id'];
+        $cat_title = $row['title'];
+        echo "<li><a class='nav-link'  href='index.php?cat=$cat_id'>$cat_title</a></li>";
+    }
+}
+
+//irtaza space
 
 
 

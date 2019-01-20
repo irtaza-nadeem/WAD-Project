@@ -73,16 +73,28 @@ require_once "server/functions.php";
 
 
     <!--************************************CONTENT START*********************************-->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 style="font-family: 'Dancing Script', cursive;"><Welcom></Welcom>Welcome to RESERVEit</h1>
-        </div>
+    <br>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="bg-light">
+            <ul class="">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="nav-link text-center">
+                        <i class="fas fa-sitemap"></i>
+                        Categories
+                    </a>
+                    <ul class="collapse show list-unstyled" id="homeSubmenu">
+                        <?php get_categories(); ?>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <article id="content" class="container-fluid bg-white">
+            <div class="row">
+                <?php  ?>
+            </div>
+        </article>
     </div>
-
-    <article id="content" class="container-fluid bg-white">
-        <?php echo "content area"; ?>
-        <!--admin walay bando ka kam ha dont touch plzzzzzz-->
-    </article>
     <br>
     <!--************************************CONTENT END*********************************-->
 
