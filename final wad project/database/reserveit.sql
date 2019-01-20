@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2019 at 05:12 PM
+-- Generation Time: Jan 20, 2019 at 07:47 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -21,6 +21,17 @@ SET time_zone = "+00:00";
 --
 -- Database: `reserveit`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `title` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -47,6 +58,13 @@ CREATE TABLE `news` (
   `news` varchar(2000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`id`, `news`) VALUES
+(1, 'asdfghjk');
+
 -- --------------------------------------------------------
 
 --
@@ -65,6 +83,22 @@ CREATE TABLE `registration` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `restaurants`
+--
+
+CREATE TABLE `restaurants` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `address` varchar(1000) NOT NULL,
+  `description` varchar(2000) NOT NULL,
+  `keywords` varchar(2000) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `image` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `subscribers`
 --
 
@@ -75,6 +109,12 @@ CREATE TABLE `subscribers` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `contacts`
@@ -95,6 +135,12 @@ ALTER TABLE `registration`
   ADD PRIMARY KEY (`email`);
 
 --
+-- Indexes for table `restaurants`
+--
+ALTER TABLE `restaurants`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `subscribers`
 --
 ALTER TABLE `subscribers`
@@ -103,6 +149,12 @@ ALTER TABLE `subscribers`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -114,6 +166,12 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `restaurants`
+--
+ALTER TABLE `restaurants`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --

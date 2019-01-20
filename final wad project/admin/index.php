@@ -12,11 +12,11 @@ if(isset($_POST['insert_pro']))
     $user = $_POST['admin_user'];
     $pass = $_POST['admin_password'];
 
-    if(empty(trim($user)))
+    if(empty($user))
     {
         $u = "<b>Username Required</b>";
     }
-    if(empty(trim($pass)))
+    if(empty($pass))
     {
         $p = "<b>Password Required</b>";
     }

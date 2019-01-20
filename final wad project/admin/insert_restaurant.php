@@ -1,8 +1,12 @@
 <?php
 require_once "../server/db_connection.php";
 if(isset($_POST['insert_pro'])){
+
+
+    //fareed and irtaza works on this
+
     //getting text data from the fields
-    $pro_title = $_POST['pro_title'];
+   /* $pro_title = $_POST['pro_title'];
     $pro_cat = $_POST['pro_cat'];
     $pro_brand = $_POST['pro_brand'];
     $pro_price = $_POST['pro_price'];
@@ -14,12 +18,12 @@ if(isset($_POST['insert_pro'])){
     $pro_image_tmp = $_FILES['pro_image']['tmp_name'];
     move_uploaded_file($pro_image_tmp,"product_images/$pro_image");
 
-    $insert_product = "insert into products (pro_cat, pro_brand,pro_title,pro_price,pro_desc,pro_image,pro_keywords) 
+    $insert_product = "insert into products (pro_cat, pro_brand,pro_title,pro_price,pro_desc,pro_image,pro_keywords)
                   VALUES ('$pro_cat','$pro_brand','$pro_title','$pro_price','$pro_desc','$pro_image','$pro_keywords');";
     $insert_pro = mysqli_query($con, $insert_product);
     if($insert_pro){
         header("location: ".$_SERVER['PHP_SELF']);
-    }
+    }*/
 }
 ?>
 <!DOCTYPE html>
