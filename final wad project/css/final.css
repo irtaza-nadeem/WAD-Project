@@ -30,15 +30,6 @@ div.icon{
     text-align: center;
 }
 
-/*.fas .fa-lock{*/
-    /*font-size: 60px;*/
-/*}*/
-
-/*.card-body .fas{*/
-    /*font-size: 80px;*/
-    /*color: darkgrey;*/
-/*}*/
-
 .card-body ,.icon{
     text-align: center;
 }
@@ -221,7 +212,6 @@ li.dropdown1 {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    /*background: var(--color-custom);*/
 }
 
 #sidebar .sidebar-header strong {
@@ -238,7 +228,6 @@ li.dropdown1 {
 }
 
 #sidebar ul li a:hover {
-    /*color: var(--color-custom);*/
     background: #fff;
 }
 
@@ -249,7 +238,6 @@ li.dropdown1 {
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: black;
-    /*background: var(--color-custom);*/
 }
 
 a[data-toggle="collapse"] {
@@ -271,7 +259,6 @@ ul ul a {
 
 a.article,
 a.article:hover {
-    /*background: var(--color-custom) !important;*/
     color: #fff !important;
 }
 
