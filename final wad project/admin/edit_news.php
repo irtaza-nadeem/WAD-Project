@@ -1,18 +1,30 @@
 <?php
 require_once "../server/db_connection.php";
 
-if(isset($_POST['insert_pro']))
-{
-    $news = $_POST['insert_news'];
+//if(isset($_POST['insert_pro']))
+//{
+//    $news = $_POST['insert_news'];
+//
+//    $insert_n = "select * from news;";
+//    $insert_pro = mysqli_query($con, $insert_n);
+//
+//    if($insert_pro)
+//    {
+//        header("location: ".$_SERVER['PHP_SELF']);
+//    }
+//}
 
-    $insert_n = "select * from news;";
-    $insert_pro = mysqli_query($con, $insert_n);
-
-    if($insert_pro)
+if (isset($_POST['delete_n'])) {
+    global $con;
+    $id = $_POST['delete_n'];
+    $del_n = "DELETE from news WHERE id = '$id';";
+    $del_news = mysqli_query($con, $del_n);
+    if($del_news)
     {
-        header("location: ".$_SERVER['PHP_SELF']);
+       echo "Data Removed";
     }
 }
+
 
 function showNews()
 {
@@ -40,7 +52,7 @@ function showNews()
                 </div>
                 
                 <div class=\"col-sm-1 col-md-1 col-lg-1 col-xl-1\">
-                    <button type=\"submit\" name=\"delete_n\" class=\"btn btn-danger btn-block\">Delete</button>
+                    <button type=\"submit\" value=\"$news_id\" name=\"delete_n\" class=\"btn btn-danger btn-block\">Delete</button>
                 </div>
             </div>
             <br>
