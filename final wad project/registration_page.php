@@ -54,20 +54,16 @@ require_once "server/functions.php";
                         <h1>Register</h1>
                         <p>Please fill in this form to create an account.</p>
                     </div>
-
                     <div class="col-md-6">
                         <label><i class="fas fa-user"> </i><b> Firstname</b></label>
                         <input type="text" class="form-control" id="fn" name="fname" placeholder="Enter firstname" name="name">
                         <div id="msg"></div>
                     </div>
-
                     <div class="col-md-6">
                         <label><i class="fas fa-users"></i><b> Lastname</b></label>
                         <input type="text" class="form-control" id="ln" name="lname" placeholder="Enter lastname" name="name">
                         <div id="msg1"></div>
                     </div>
-
-
                     <div class="form-group col-md-6">
                         <div class="select-list">
                             <label><i id="g" class="fas fa-transgender"></i><b> Gender</b></label>
@@ -77,31 +73,26 @@ require_once "server/functions.php";
                         </div>
                         <div id="msg2"></div>
                     </div>
-
                     <div class="col-md-6">
                         <label for="Date"><i class="fas fa-clock"></i><b> Date of Birth:</b></label>
                         <input type="date" id="dob" name="trip-start" class="form-control" min="1970-01-01" max="2019-12-31">
                         <div id="msg3"></div>
                     </div>
-
                     <div class="col-12">
                         <label for="email"><i class="fas fa-envelope"></i><b> Email</b></label>
                         <input type="text" class="form-control" id="e" name="email" placeholder="Enter Email" name="email">
                         <div id="msg4"></div>
                     </div>
-
                     <div class="col-md-6">
                         <label for="psw"><i class="fas fa-key"></i><b> Password</b></label>
                         <input type="password" id="ps" class="form-control" name="pw" placeholder="Enter Password" name="psw">
                         <div id="msg5"></div>
                     </div>
-
                     <div class="col-md-6">
                         <label for="psw-repeat"><i class="fas fa-key"></i><b> Repeat Password</b></label>
                         <input type="password" id="ps2" class="form-control" placeholder="Repeat Password" name="psw-repeat">
                         <div id="msg6"></div>
                     </div>
-
                     <div class="col-12">
                         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
                     </div>
