@@ -12,7 +12,6 @@ if(isset($_POST['delete_n']))
     {
         header("location: ".$_SERVER['PHP_SELF']);
     }
-
 }
 if(isset($_POST['edit_n']))
 {
@@ -21,7 +20,7 @@ if(isset($_POST['edit_n']))
 
     $edit_n = "update news set news='$latest_news' where id='$news_id';";
     $edit_news = mysqli_query($con, $edit_n);
-    
+
     if($edit_news)
     {
         header("location: ".$_SERVER['PHP_SELF']);
