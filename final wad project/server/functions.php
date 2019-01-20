@@ -4,6 +4,7 @@
 <?php
 require_once "db_connection.php";
 setdata();
+data_exits_or_not();
 
 /*azan space*/
 /**
@@ -134,22 +135,30 @@ function data_exits_or_not()
     global $con;
     if(isset($_POST['login']))
     {
+
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $query1 ="select email from registration where email = '$email'";
+        $query2 ="select password from registration where password= '$password'";
 
-        $query="select email,password from registration where email=$email AND password=$password ";
+        $data1 = mysqli_query($con,$query1);
+        $data2 = mysqli_query($con,$query2);
 
-        $match_data = mysqli_query($con,$query);
-
-
-        if(!$match_data)
+        if($email != $data1)
         {
-
             echo "YOUR ACCOUNT DOESN'T EXISTS";
-
+            header("location:../signin.php");
         }
-
+        else if($password !=$data2)
+        {
+            echo "Wrong Password";
+            header("location:../signin.php");
+        }
+        else {
+            header("location:../index.php");
+        }
     }
+    /*ya sai ni ha abhi mujy krna ni a raha subha dekhein gy*/
 }
 
 function forget_password()
