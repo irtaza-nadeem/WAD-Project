@@ -233,6 +233,7 @@ function datacheck() {
     if(email.length === 0)
     {
         check = false;
+        document.getElementById("s").innerText =  "";
         document.getElementById("s").style.color = "#ff0000";
         document.getElementById("s").innerHTML +=  "<br><br>" + "*Enter Email";
 
@@ -243,6 +244,7 @@ function datacheck() {
         if (match_email == null)
         {
             check = false;
+            document.getElementById("s").innertext = "";
             document.getElementById("s").style.color = "#ff0000";
             document.getElementById("s").innerHTML += "<br>" + "*not a valid email";
 
@@ -252,6 +254,7 @@ function datacheck() {
    if(password.length === 0)
     {
         check = false;
+        document.getElementById("s").innerText +=  "";
         document.getElementById("s").style.color = "#ff0000";
         document.getElementById("s").innerHTML +=  "<br><br>" + "*password required";
 
@@ -262,6 +265,7 @@ function datacheck() {
         if (match_password == null)
         {
             check = false;
+            document.getElementById("s").innerText= "";
             document.getElementById("s").style.color = "#ff0000";
             document.getElementById("s").innerHTML += "<br>" + "*not a valid password ";
 
