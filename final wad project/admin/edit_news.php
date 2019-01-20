@@ -1,19 +1,6 @@
 <?php
 require_once "../server/db_connection.php";
 
-//if(isset($_POST['insert_pro']))
-//{
-//    $news = $_POST['insert_news'];
-//
-//    $insert_n = "select * from news;";
-//    $insert_pro = mysqli_query($con, $insert_n);
-//
-//    if($insert_pro)
-//    {
-//        header("location: ".$_SERVER['PHP_SELF']);
-//    }
-//}
-
 if(isset($_POST['delete_n']))
 {
     $news_i = $_POST['delete_n'];
@@ -27,7 +14,19 @@ if(isset($_POST['delete_n']))
     }
 
 }
+if(isset($_POST['edit_n']))
+{
+    $news_id = $_POST['edit_n'];
+    $latest_news = $_POST['edit_news'];
 
+    $edit_n = "update news set news='$latest_news' where id='$news_id';";
+    $edit_news = mysqli_query($con, $edit_n);
+    
+    if($edit_news)
+    {
+        header("location: ".$_SERVER['PHP_SELF']);
+    }
+}
 
 function showNews()
 {
@@ -46,11 +45,11 @@ function showNews()
                 </div>
                 
                 <div class=\"col-sm-12 col-md-8 col-lg-8 col-xl-8\">
-                    <textarea class=\"form-control\" type=\"file\" id=\"ins_news\ name=\"insert_news\">$news</textarea>
+                    <textarea class=\"form-control\" type=\"file\" id=\"ins_news\" name=\"edit_news\">$news</textarea>
                 </div>
                 
                 <div class=\"col-sm-1 col-md-1 col-lg-1 col-xl-1\">
-                    <button type=\"submit\" name=\"edit_n\" class=\"btn btn-primary btn-block\">Edit</button>
+                    <button type=\"submit\" value=\"$news_id\" name=\"edit_n\" class=\"btn btn-primary btn-block\">Edit</button>
                 </div>
                 
                 <div class=\"col-sm-1 col-md-1 col-lg-1 col-xl-1\">
