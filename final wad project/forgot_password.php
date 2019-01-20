@@ -46,7 +46,12 @@ require_once "server/functions.php";
                         <div class="input-group">
                             <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
                         </div>
-                        <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit"  style="margin-top: 10px">
+                        <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit"  style="margin-top: 10px" >
+                        <div id="func">
+                            <?php forget_password(); ?>
+
+                        </div>
+
                     </div>
                 </div>
         </div>
