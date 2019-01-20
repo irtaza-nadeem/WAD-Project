@@ -234,7 +234,97 @@ function datacheck() {
 
 
 
+function contactus_name()
+{
+    //alert("hello");
+    var name = /[a-zA-Z][^#&<>\"~;$^%{}?,!@/()'\-_.\\|"+*!/=[\]0-9]{1,20}$/g;
 
-/*tahreem space
+    var client_name = document.getElementById('client_name').value;
 
-tahreem space*/
+    //alert(name);
+    var res_name = client_name.match(name);
+
+    if(client_name.length === 0)
+    {
+        document.getElementById("name_error_msg").innerHTML += "<br>" + "Enter your name";
+    }
+    else
+    {
+        if(res_name==null)
+        {
+            document.getElementById("name_error_msg").innerHTML += "<br>" + "Invalid Format only alphabets are allowed";
+        }
+    }
+}
+
+function contactus_email()
+{
+    //alert("hello");
+    var email = /^([a-zA-Z])+(.|_)?([a-zA-Z])+(.|_)?(\d)*[@]([a-zA-Z])+(.|_)?([a-zA-Z])(.com)/g;
+
+    var client_email = document.getElementById('client_email').value;
+
+    //alert(name);
+    var res_name = client_email.match(email);
+
+    if(client_email.length === 0)
+    {
+        document.getElementById("email_error_msg").innerHTML += "<br>" + "Enter your email";
+    }
+    else
+    {
+        if(res_name==null)
+        {
+            document.getElementById("email_error_msg").innerHTML += "<br>" + "Invalid Email";
+        }
+    }
+}
+
+function contactus_number()
+{
+    //alert("hello");
+    var number = /^(03\d{2}|\+92(3\d{2}|\s3\d{2}|\-3\d{2})|0092(3\d{2}|\s3\d{2}|\-3\d{2}))(\s|\-)?\d{7}/g;
+
+    var client_number = document.getElementById('client_number').value;
+
+    //alert(name);
+    var res_name = client_number.match(number);
+
+    if(client_number.length === 0)
+    {
+        document.getElementById("number_error_msg").innerHTML += "<br>" + "Enter your number";
+    }
+    else
+    {
+        if(res_name==null)
+        {
+            document.getElementById("number_error_msg").innerHTML += "<br>" + "Invalid number";
+        }
+    }
+}
+
+function contactus_msg()
+{
+    //alert("hello");
+    //var msg;
+
+    var client_msg = document.getElementById('client_msg').value;
+
+    //alert(name);
+
+
+    if(client_msg.length === 0)
+    {
+        // alert("hello")
+        document.getElementById("msg_error_msg").innerHTML += "<br>" + "Enter your Message";
+    }
+    else
+    {
+        if(res_name==null)
+        {
+            document.getElementById("msg_error_msg").innerHTML += "<br>" + "Invalid Message";
+        }
+    }
+}
+
+//tahreem space*/
