@@ -92,7 +92,7 @@ require_once "server/functions.php";
                 <div style="padding-top: 0px" class="row">
                     <div class="col-1" style="padding-top: 10px"><i class="fas fa-key"></i></div>
                     <div class="col">
-                        <input type="text" class="form-control" id="password" name="password" placeholder="Password">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                     </div>
                 </div>
             </div>
@@ -106,13 +106,18 @@ require_once "server/functions.php";
 
                 <div class="col-auto">
                     <input class="btn btn-primary" type="submit" name="login" value="Login" onclick="datacheck()">
+
+                    <div id="php_func">
+                        <?php data_exits_or_not(); ?>
+                    </div>
+
                 </div>
 
-                <div>
-                    <p id="s">
+                <div class="col-10">
 
-
+                    <p id="s" align="center">
                     </p>
+
                 </div>
 
             </div>

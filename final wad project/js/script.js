@@ -125,12 +125,65 @@ fareed space*/
 function datacheck() {
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value;
+    var check=true;
 
+    var email_check = /^([a-zA-Z])+(.|_)?([a-zA-Z])+(.|_)?(\d)*[@]((gmail)|(yahoo)|(facebook))(.com)/g;
 
-    document.getElementById('s').innerHTML = "<td>" + email + "</td>" + "<td>" + password;
+    var password_exp = /[a-zA-Z#&<>\"~;$^%{}?,!@/()'\-_.\\|"+*/=[\]0-9]{8,20}$/g;
+    var match_email=email.match(email_check);
 
+    var match_password=password.match(password_exp);
 
+    if(email.length === 0)
+    {
+        check = false;
+        document.getElementById("s").style.color = "#ff0000";
+        document.getElementById("s").innerHTML +=  "<br><br>" + "*Enter Email";
+
+    }
+
+    else
+        {
+        if (match_email == null)
+        {
+            check = false;
+            document.getElementById("s").style.color = "#ff0000";
+            document.getElementById("s").innerHTML += "<br>" + "*not a valid email";
+
+        }
+    }
+
+   if(password.length === 0)
+    {
+        check = false;
+        document.getElementById("s").style.color = "#ff0000";
+        document.getElementById("s").innerHTML +=  "<br><br>" + "*password required";
+
+    }
+
+    else
+    {
+        if (match_password == null)
+        {
+            check = false;
+            document.getElementById("s").style.color = "#ff0000";
+            document.getElementById("s").innerHTML += "<br>" + "*not a valid password ";
+
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //saim space*/

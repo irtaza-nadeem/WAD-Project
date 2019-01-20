@@ -58,9 +58,29 @@ function data_exits_or_not()
 
         $query="select email,password from registration where email=$email AND password=$password ";
 
+        $match_data = mysqli_query($con,$query);
+
+
+        if(!$match_data)
+        {
+
+            echo "YOUR ACCOUNT DOESN'T EXISTS";
+
+        }
 
     }
+}
 
+function forget_password()
+{
+
+
+    $email=$_POST['email'];
+
+    $password=$_POST['password'];
+
+    $msg= "YOUR PASSWORD IS ". $password;
+    mail($email,"WELCOME TO RESERVEIT",$msg);
 
 }
 
