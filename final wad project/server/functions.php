@@ -57,7 +57,7 @@ function get_restaurants()
         $pro_title = $row['name'];
         $pro_image = $row['image'];
         echo "
-                <div class='col-sm-6 col-md-4 col-lg-3 text-center res-summary' style='margin-left: 14px'>
+                <div class='col-sm-6 col-md-4 col-lg-2 text-center res-summary' style='margin-left: 14px'>
                     <h5 class='text-capitalize'>$pro_title</h5>
                     <img src='admin/restaurant_images/$pro_image'>
                     <br>
