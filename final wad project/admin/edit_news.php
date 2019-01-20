@@ -14,17 +14,6 @@ require_once "../server/db_connection.php";
 //    }
 //}
 
-if (isset($_POST['delete_n'])) {
-    global $con;
-    $id = $_POST['delete_n'];
-    $del_n = "DELETE from news WHERE id = '$id';";
-    $del_news = mysqli_query($con, $del_n);
-    if($del_news)
-    {
-       echo "Data Removed";
-    }
-
-}
 if(isset($_POST['delete_n']))
 {
     $news_i = $_POST['delete_n'];
