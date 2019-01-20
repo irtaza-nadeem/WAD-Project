@@ -68,13 +68,13 @@ if(isset($_POST['insert_pro'])){
                     <select class="form-control" id="pro_cat" name="pro_cat">
                         <option>Select Category</option>
                         <?php
-                        $getCatsQuery = "select * from categories";
-                        $getCatsResult = mysqli_query($con,$getCatsQuery);
-                        while($row = mysqli_fetch_assoc($getCatsResult)){
-                            $cat_id = $row['id'];
-                            $cat_title = $row['title'];
-                            echo "<option value='$cat_id'>$cat_title</option>";
-                        }
+                            $getCatsQuery = "select * from categories";
+                            $getCatsResult = mysqli_query($con,$getCatsQuery);
+                            while($row = mysqli_fetch_assoc($getCatsResult)){
+                                $cat_id = $row['id'];
+                                $cat_title = $row['title'];
+                                echo "<option value='$cat_id'>$cat_title</option>";
+                            }
                         ?>
                     </select>
                 </div>
