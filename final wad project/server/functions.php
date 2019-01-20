@@ -5,7 +5,7 @@
 require_once "db_connection.php";
 
 /*azan space*/
-function processString()
+function setdata()
 {
     global $con;
     if(isset($_POST['reg_data']))
@@ -14,11 +14,11 @@ function processString()
         $lastname = $_POST['lanme'];
         $password = $_POST['pw'];
         $dob = $_POST['start_trip'];
-        $gender = $_POST['g'];
+        $gender = $_POST['gen'];
         $email = $_POST['email'];
 
         $insertQuery = "insert into registration(email,firstname,lastname,gender,dob,password)
-    values('$email','$firtname','$lastname','$dob','$gender','$password');";
+        values('$email','$firtname','$lastname','$dob','$gender','$password');";
         $res = mysqli_query($con,$insertQuery);
         if(!$res)
         {
