@@ -3,29 +3,34 @@
 <html lang="en">
 <?php
 require_once "db_connection.php";
+setdata();
 
 /*azan space*/
+/**
+ *
+ */
 function setdata()
 {
     global $con;
     if(isset($_POST['reg_data']))
     {
         $firtname = $_POST['fname'];
-        $lastname = $_POST['lanme'];
+        $lastname = $_POST['lname'];
         $password = $_POST['pw'];
-        $dob = $_POST['start_trip'];
+        $dob = $_POST['trip-start'];
         $gender = $_POST['gen'];
         $email = $_POST['email'];
-
-        $insertQuery = "insert into registration(email,firstname,lastname,gender,dob,password)
+        $insertQuery = "insert into registration(email,firstname,lastname,dob,gender,password)
         values('$email','$firtname','$lastname','$dob','$gender','$password');";
         $res = mysqli_query($con,$insertQuery);
         if(!$res)
         {
             echo "Not Executed";
         }
+        header("location:../registration_page.php");
     }
 }
+
 /*azan space*/
 
 
