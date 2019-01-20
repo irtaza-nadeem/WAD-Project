@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <?php
 require_once "server/functions.php";
+//require_once  "js/script.js";
 ?>
+
 <html lang="en">
 <head>
+    <script src="js/script.js"></script>
     <meta charset="UTF-8">
     <title>Contact Us</title>
 
@@ -27,11 +30,44 @@ require_once "server/functions.php";
 
 <!-- ****************************HEADER BEGINS HERE*****************************-->
 <div class="container-fluid px-3">
+    <!--LOGO-->
+    <div class="row mb-3 mb-sm-0">
+        <div class="col-sm-6">
+            <h1 class="text-center text-sm-left" style="font-family: 'Pacifico', cursive;">RESERVEit </h1>
+        </div>
+        <div class="col-sm-6 text-center text-sm-right">
+            <div class="btn-group mt-sm-2">
+                <div class="mx-2"><a href="registration_page.php" class="btn btn-primary px-3">Sign up</a></div>
+                <div class="mx-2"><a href="signin.php" class="btn btn-secondary px-3">Login</a></div>
+            </div>
+        </div>
+    </div>
 
-    <?php
-    include 'header.php';
-    ?>
 
+    <div class="row">
+        <div class="col">
+            <ul class="topnav1">
+                <li><a class="active" href="index.php"><i class="fas fa-home"></i>  Home</a></li>
+                <li><a href="news.php"><i class="fas fa-newspaper"></i>  News</a></li>
+                <li><a href="contact_us.php"><i class="fas fa-phone"></i>  Contact</a></li>
+                <li><a href="about.php"><i class="fas fa-users"></i>  About</a></li>
+                <li class="dropdown1">
+                    <a href="#menu" class="dropbtn">More <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown1-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i> </button>
+                    </form>
+                </div>
+            </ul>
+        </div>
+    </div>
     <!-- ****************************CONTACT US BEGINS HERE*****************************-->
     <div class="row">
         <div class="col">
@@ -44,11 +80,20 @@ require_once "server/functions.php";
 
                 <form class="contact_form" >
                     <h4 >Write Us</h4>
-                    <input class="contact_input" type="text" name="client_name" placeholder="Name">
-                    <input class="contact_input" type="email" name="client_email" placeholder="Email">
-                    <input class="contact_input" type="text" name="client_number" placeholder="Number">
-                    <textarea class="contact_text_area">Your Message Here</textarea>
-                    <input class="submit_button" type="submit" name="submit" value="Send Message">
+                    <input class="contact_input" type="text" name="client_name" id="client_name" placeholder="Name"  onblur="contactus_name()">
+                    <span class="error_msg" id="name_error_msg"></span>
+
+                    <input class="contact_input" type="email" name="client_email" id="client_email" placeholder="Email"  onblur="contactus_email()">
+                    <span class="error_msg" id="email_error_msg"></span>
+
+                    <input class="contact_input" type="text" name="client_number" id="client_number" placeholder="Number" onblur="contactus_number()">
+                    <span class="error_msg" id="number_error_msg"></span>
+
+                    <textarea class="contact_text_area" id="client_msg" placeholder="Your message here..." onblur="contactus_msg()"></textarea>
+                    <span class="error_msg" id="msg_error_msg"></span>
+
+                    <input class="submit_button" type="submit" name="submit" value="Send Message" disabled>
+                    <span class="success_msg" id="msg"></span>
                 </form>
             </div>
 
@@ -103,10 +148,54 @@ require_once "server/functions.php";
     <!-- ****************************CONTACT US ENDS HERE*****************************-->
 
 
+
+
     <!--FOOTER START-->
-    <?php
-    include 'footer.php';
-    ?>
+    <div class="footer center container-fluid">
+        <div class="row m-0 footer-main" >
+            <div class="col-lg-6 col" style="margin-left: 0">
+                <div>
+                    <h2>Website Name</h2>
+                    <div class="decor d-lg-none"></div>
+                </div>
+                <div>
+                    <div class="my-small-text SD-padding">
+                        Slogan Slogan Slogan Slogan
+                    </div>
+                    <div class="decor d-lg-none"></div>
+                </div>
+                <div>
+                    <div class="my-small-text SD-padding">
+                        Deatail Deatail Deatail Deatail Deatail Deatail Deatail Deatail Deatail Deatail Deatail Deatail
+                        Deatail Deatail Deatail
+                    </div>
+                    <div class="decor d-lg-none"></div>
+                </div>
+            </div>
+
+            <div class="center footer-main-end col-lg-6">
+                <div> <h2>Links</h2></div>
+                <ul class="my-small-text">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="icon float-lg-right col-lg-6">
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-google-plus-square"></i>
+                <i class="fab fa-pinterest-square"></i>
+                <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="copyright-font footer-copyright-end col-lg-6">
+                Copyright © 2018-2050 - All rights reserved.
+            </div>
+        </div>
+    </div>
     <!--FOOTER END-->
 
     <!--END-->
