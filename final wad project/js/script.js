@@ -219,8 +219,8 @@ fareed space*/
 
 
 function datacheck() {
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
+    var email = document.getElementById('e').value;
+    var password = document.getElementById('p').value;
     var check=true;
 
     var email_check = /^([a-zA-Z])+(.|_)?([a-zA-Z])+(.|_)?(\d)*[@]((gmail)|(yahoo)|(facebook))(.com)/g;
@@ -257,7 +257,6 @@ function datacheck() {
         document.getElementById("s").innerText +=  "";
         document.getElementById("s").style.color = "#ff0000";
         document.getElementById("s").innerHTML +=  "<br><br>" + "*password required";
-
     }
 
     else
@@ -268,8 +267,14 @@ function datacheck() {
             document.getElementById("s").innerText= "";
             document.getElementById("s").style.color = "#ff0000";
             document.getElementById("s").innerHTML += "<br>" + "*not a valid password ";
-
         }
+    }
+    if (check === true)
+    {
+        return true;
+    }
+    else{
+        return false;
     }
 }
 
