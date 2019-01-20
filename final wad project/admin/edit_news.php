@@ -12,6 +12,20 @@ if(isset($_POST['insert_pro']))
     {
         header("location: ".$_SERVER['PHP_SELF']);
     }
+
+}
+if(isset($_POST['delete_n']))
+{
+    $news_i = $_POST['delete_n'];
+
+    $delete_n = "delete from news where id = '$news_i';";
+    $delete_news = mysqli_query($con, $delete_n);
+
+    if($delete_news)
+    {
+        header("location: ".$_SERVER['PHP_SELF']);
+    }
+
 }
 
 function showNews()
@@ -20,8 +34,7 @@ function showNews()
     $show_n = "select * from news;";
     $show_news = mysqli_query($con, $show_n);
 
-    while($row=mysqli_fetch_assoc($show_news))
-    {
+    while($row=mysqli_fetch_assoc($show_news)){
         $news_id = $row['id'];
         $news = $row['news'];
         echo
@@ -32,7 +45,7 @@ function showNews()
                 </div>
                 
                 <div class=\"col-sm-12 col-md-8 col-lg-8 col-xl-8\">
-                    <textarea class=\"form-control\" type=\"file\" id=\"ins_news\ name=\"insert_news\" placeholder=\"Enter News\">$news</textarea>
+                    <textarea class=\"form-control\" type=\"file\" id=\"ins_news\ name=\"insert_news\">$news</textarea>
                 </div>
                 
                 <div class=\"col-sm-1 col-md-1 col-lg-1 col-xl-1\">
@@ -40,14 +53,14 @@ function showNews()
                 </div>
                 
                 <div class=\"col-sm-1 col-md-1 col-lg-1 col-xl-1\">
-                    <button type=\"submit\" name=\"delete_n\" class=\"btn btn-danger btn-block\">Delete</button>
+                    <button type=\"submit\" value=\"$news_id\" name=\"delete_n\" class=\"btn btn-danger btn-block\">Delete</button>
                 </div>
             </div>
             <br>
         ";
     }
-}
 
+}
 ?>
 
 
