@@ -18,13 +18,15 @@ if(isset($_POST['edit_n']))
     $news_id = $_POST['edit_n'];
     $latest_news = $_POST['edit_news'];
 
-    $edit_n = "update news set news='$latest_news' where id='$news_id';";
+    echo $latest_news;
+
+    /*$edit_n = "update news set news='$latest_news' where id='$news_id';";
     $edit_news = mysqli_query($con, $edit_n);
 
     if($edit_news)
     {
         header("location: ".$_SERVER['PHP_SELF']);
-    }
+    }*/
 }
 
 function showNews()
