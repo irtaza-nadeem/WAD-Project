@@ -4,7 +4,7 @@
 <?php
 require_once "db_connection.php";
 setdata();
-
+forget_password();
 /*azan space*/
 /**
  *
@@ -149,19 +149,27 @@ function data_exits_or_not()
 
         }
 
+
     }
 }
 
 function forget_password()
 {
 
+    if(isset($_POST['recover-submit']))
+        {
 
-    $email=$_POST['email'];
 
-    $password=$_POST['password'];
+            $subject="HELLO SIR";
+            $headers = "From: reservit@world.com" . "\r\n";
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $msg = "YOUR PASSWORD IS " . $password;
+                mail($email,$subject,$msg,$headers);
 
-    $msg= "YOUR PASSWORD IS ". $password;
-    mail($email,"WELCOME TO RESERVEIT",$msg);
+
+        }
+
 
 }
 
