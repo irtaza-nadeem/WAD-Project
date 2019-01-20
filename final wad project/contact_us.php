@@ -92,7 +92,7 @@ require_once "server/functions.php";
                     <textarea class="contact_text_area" id="client_msg" placeholder="Your message here..." onblur="contactus_msg()"></textarea>
                     <span class="error_msg" id="msg_error_msg"></span>
 
-                    <input class="submit_button" type="submit" name="submit" value="Send Message" disabled>
+                    <input class="submit_button" type="submit" name="submit"  value="Refresh Page" onClick="window.location.reload()">
                     <span class="success_msg" id="msg"></span>
                 </form>
             </div>
