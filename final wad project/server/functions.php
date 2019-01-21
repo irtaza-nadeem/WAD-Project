@@ -4,7 +4,8 @@
 <?php
 require_once "db_connection.php";
 setdata();
-forget_password();
+data_exits_or_not();
+//forget_password();
 /*azan space*/
 /**
  *
@@ -129,6 +130,9 @@ function getnews()
 //saim space
 
 
+/**
+ *
+ */
 function data_exits_or_not()
 {
     global $con;
@@ -137,41 +141,74 @@ function data_exits_or_not()
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $query="select email,password from registration where email=$email AND password=$password ";
+
+        $query="select email,password from registration where email='$email' AND  password='$password'";
+        //$query1="select password from registration where  password='$password' ";
+
+
 
         $match_data = mysqli_query($con,$query);
-
-
-        if(!$match_data)
+        $c = mysqli_num_rows($match_data);
+        //$match_data2 = mysqli_query($con,$query1);
+        if($c==0)
         {
-
-            echo "YOUR ACCOUNT DOESN'T EXISTS";
+            echo "you cant login";
+        }
+        else
+            {
+                echo "YOU have logged in successfully";
 
         }
+
 
 
     }
 }
 
-function forget_password()
-{
-
-    if(isset($_POST['recover-submit']))
-        {
-
-
-            $subject="HELLO SIR";
-            $headers = "From: reservit@world.com" . "\r\n";
-                $email = $_POST['email'];
-                $password = $_POST['password'];
-                $msg = "YOUR PASSWORD IS " . $password;
-                mail($email,$subject,$msg,$headers);
-
-
-        }
-
-
-}
+//function forget_password()
+//{
+//
+////    if(isset($_POST['recover-submit']))
+////        {
+////            $subject="HELLO SIR";
+////            $headers = "From: reservit@world.com" . "\r\n";
+////                $email = $_POST['email'];
+////                //$password = $_POST['password'];
+////                $msg = "YOUR PASSWORD IS " ;
+////                mail($email,$subject,$msg,$headers);
+////
+////
+////        }
+//    if(isset($_POST['recover-submit']))
+//    {
+//        $mailto = $_POST['email33'];
+//
+//        $mailSub = "HELLLLO SIRRRRR";
+//        $mailMsg = "YOUR PASSWORD IS";
+//        require 'PHPMailer-master/PHPMailerAutoload.php';
+//        $mail = new PHPMailer();
+//        $mail->IsSmtp();
+//        $mail->SMTPDebug = 1;
+//        $mail->SMTPAuth = true;
+//        $mail->SMTPSecure = 'ssl';
+//        $mail->Host = "smtp.gmail.com";
+//        $mail->Port = 465; // or 587
+//        $mail->IsHTML(true);
+//    $mail ->Username = "saimmalik8397@gmail.com";
+//    $mail ->Password =  ;
+//        $mail->SetFrom( "saimmalik8397@gmail.com");
+//        $mail->Subject = $mailSub;
+//        $mail->Body = $mailMsg;
+//        $mail->AddAddress($mailto);
+//
+//        if (!$mail->Send()) {
+//            echo "Mail Not Sent";
+//        }
+//        else {
+//            echo "Mail Sent";
+//        }
+//    }
+//}
 
 
 

@@ -269,14 +269,22 @@ function datacheck() {
             document.getElementById("s").innerHTML += "<br>" + "*not a valid password ";
         }
     }
-    if (check === true)
-    {
-        return true;
-    }
-    else{
-        return false;
-    }
+    // if (check === true)
+    // {
+    //     setTimeout(function(){alert("You have logged in!!!")},5);
+    // }
+    // else{
+    //     return false;
+    // }
 }
+
+
+
+
+
+
+
+
 
 
 

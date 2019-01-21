@@ -35,8 +35,12 @@ require_once "server/functions.php";
 
     <!--************************************CONTENT START*********************************-->
 
-    <div class="row" style="margin-top: 20px; margin-bottom: 20px; font-family: 'Calibri'">
+
+<!--    <form action="server/functions.php" method="POST" class="myform">-->
+    <div class="row" style="margin-top: 20px; margin-bottom: 20px; font-family: 'Calibri'">-->
         <div class="col-lg-4 col-sm-1 offset-lg-4">
+            <form action="server/functions.php" method="POST" class="myform">
+
                 <div class="card forgot">
                     <div class="card-body">
                         <i class="fas fa-lock icon" style="font-size: 80px; padding-bottom: 10px;   margin: 0;position:relative;"></i>
@@ -44,19 +48,20 @@ require_once "server/functions.php";
                         <i class="fas fa-envelope icon2"></i>
                         <h6 style="display:inline-block"><strong>Email</strong></h6>
                         <div class="input-group">
-                            <input id="email" name="email" placeholder="email address" class="form-control"  type="email">
+                            <input id="email" name="email33" placeholder="Email Address" class="form-control"  type="text">
                         </div>
                         <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit"  style="margin-top: 10px" >
-                        <div id="func">
-                            <?php forget_password(); ?>
 
+                        <div id="func">
                         </div>
 
                     </div>
                 </div>
+
+                <form action="server/functions.php" method="POST" class="myform">
         </div>
     </div>
-
+<!--    //</form>-->
     <!--************************************CONTENT END*********************************-->
 
 
