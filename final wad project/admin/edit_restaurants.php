@@ -15,10 +15,30 @@ if(isset($_POST['delete_r']))
 }
 
 /****************************************/
-if(isset($_POST['edit_n']))
+if(isset($_POST['edit_res']))
 {
-    $news_id = $_POST['edit_n'];
-    $latest_news = $_POST['edit_news'];
+    $res_id = $_POST['edit_res'];
+    $res_name = $_POST['res_name'];
+    $res_address = $_POST['res_address'];
+    $res_des = $_POST['res_des'];
+    $res_keyword = $_POST['res_keyword'];
+    $res_cat = $_POST['res_cat'];
+
+    //getting image from the field
+    $pro_image = $_FILES['res_image']['name'];
+    $pro_image_tmp = $_FILES['res_image']['tmp_name'];
+    move_uploaded_file($pro_image_tmp,"restaurant_images/$pro_image");
+
+    $edit_restaurant = "update restaurants set name='$res_name', address='$res_address', description='$res_des', keywords='$res_keyword', 
+category='$res_cat' where id='$res_id';";
+    $edit_res = mysqli_query($con, $edit_restaurant);
+    if($edit_res){
+        header("location: ".$_SERVER['PHP_SELF']);
+    }
+}
+/*if(isset($_POST['edit_res']))
+{
+    $res_id = $_POST['edit_res'];
 
     $edit_n = "update news set news='$latest_news' where id='$news_id';";
     $edit_news = mysqli_query($con, $edit_n);
@@ -27,7 +47,7 @@ if(isset($_POST['edit_n']))
     {
         header("location: ".$_SERVER['PHP_SELF']);
     }
-}
+}*/
 /****************************************/
 
 function showRestaurantData()
@@ -49,75 +69,67 @@ function showRestaurantData()
         echo
         "
             <div class=\"row\">
-                <div class=\"d-sm-2 col-md-2 col-lg-1 col-xl-1\">
+                <div class=\"d-sm-1 col-md-2 col-lg-1 col-xl-1\">
                     <label for=\"editname\" class=\"float-md-right\"> <span class=\"d-sm-none d-md-inline\"> Name: </span></label>
                 </div>
-                <div class=\"col-sm-8 col-md-5 col-lg-4 col-xl-4\">
+                <div class=\"col-sm- col-md-5 col-lg-4 col-xl-3\">
                     <textarea class=\"form-control\" type=\"file\" id=\"res_name\" name=\"res_name\"> $res_name </textarea>
-                </div>
-                <div class=\"col-sm-2 col-md-5 col-lg-1 col-xl-1\">
-                    <button type=\"submit\" value=\"$res_id\" name=\"edit_name\" class=\"btn btn-primary btn-block\">Edit</button>
                 </div>
                 
                 <div class=\"d-sm-2 col-md-2 col-lg-1 col-xl-1\">
                     <label for=\"editaddress\" class=\"float-md-right\"> <span class=\"d-sm-none d-md-inline\"> Address: </span></label>
                 </div>
-                <div class=\"col-sm-8 col-md-5 col-lg-4 col-xl-4\">
+                <div class=\"col-sm-8 col-md-5 col-lg-4 col-xl-3\">
                     <textarea class=\"form-control\" type=\"file\" id=\"res_address\" name=\"res_address\"> $res_address </textarea>
-                </div>
-                <div class=\"col-sm-2 col-md-5 col-lg-1 col-xl-1\">
-                    <button type=\"submit\" value=\"$res_id\" name=\"edit_address\" class=\"btn btn-primary btn-block\">Edit</button>
                 </div>
                 
                 <div class=\"d-sm-2 col-md-2 col-lg-1 col-xl-1\">
                     <label for=\"editdes\" class=\"float-md-right\"> <span class=\"d-sm-none d-md-inline\"> Description: </span></label>
                 </div>
-                <div class=\"col-sm-8 col-md-5 col-lg-4 col-xl-4\">
+                <div class=\"col-sm-8 col-md-5 col-lg-4 col-xl-3\">
                     <textarea class=\"form-control\" type=\"file\" id=\"res_des\" name=\"res_des\"> $res_description </textarea>
                 </div>
-                <div class=\"col-sm-2 col-md-5 col-lg-1 col-xl-1\">
-                    <button type=\"submit\" value=\"$res_id\" name=\"edit_des\" class=\"btn btn-primary btn-block\">Edit</button>
-                </div>
+                
+                <br>
                 
                 <div class=\"d-sm-2 col-md-2 col-lg-1 col-xl-1\">
                     <label for=\"editkeyword\" class=\"float-md-right\"> <span class=\"d-sm-none d-md-inline\"> Keyword: </span></label>
                 </div>
-                <div class=\"col-sm-8 col-md-5 col-lg-4 col-xl-4\">
+                <div class=\"col-sm-8 col-md-5 col-lg-4 col-xl-3\">
                     <textarea class=\"form-control\" type=\"file\" id=\"res_keyword\" name=\"res_keyword\"> $res_keyword </textarea>
-                </div>
-                <div class=\"col-sm-2 col-md-5 col-lg-1 col-xl-1\">
-                    <button type=\"submit\" value=\"$res_id\" name=\"edit_keyword\" class=\"btn btn-primary btn-block\">Edit</button>
                 </div>
                 
                 <div class=\"d-sm-2 col-md-2 col-lg-1 col-xl-1\">
-                    <label for=\"editdes\" class=\"float-md-right\"> <span class=\"d-sm-none d-md-inline\"> Description: </span></label>
+                    <label for=\"editdes\" class=\"float-md-right\"> <span class=\"d-sm-none d-md-inline\"> Category: </span></label>
                 </div>
-                <div class=\"col-sm-8 col-md-5 col-lg-4 col-xl-4\">
+                <div class=\"col-sm-8 col-md-5 col-lg-4 col-xl-3\">
                     <textarea class=\"form-control\" type=\"file\" id=\"res_cat\" name=\"res_cat\"> $res_category </textarea>
-                </div>
-                <div class=\"col-sm-2 col-md-5 col-lg-1 col-xl-1\">
-                    <button type=\"submit\" value=\"$res_id\" name=\"edit_cat\" class=\"btn btn-primary btn-block\">Edit</button>
                 </div>
                 
                 <div class=\"d-sm-2 col-md-2 col-lg-1 col-xl-1\">
                     <label for=\"editimage\" class=\"float-md-right\"> <span class=\"d-sm-none d-md-inline\"> Image: </span></label>
                 </div>
-                <div class=\"col-sm-8 col-md-5 col-lg-4 col-xl-4\">
-                    <textarea class=\"form-control\" type=\"file\" id=\"res_image\" name=\"res_image\"> $res_image </textarea>
-                </div>
-                <div class=\"col-sm-2 col-md-5 col-lg-1 col-xl-1\">
-                    <button type=\"submit\" value=\"$res_id\" name=\"edit_image\" class=\"btn btn-primary btn-block\">Edit</button>
+                <div class=\"col-sm-9 col-md-8 col-lg-4 col-xl-3 mt-3 mt-lg-0\">
+                    <div class=\"input-group\">
+                        <div class=\"input-group-prepend\">
+                            <div class=\"input-group-text\"><i class=\"far fa-image\"></i></div>
+                        </div>
+                        <input class=\"form-control\" type=\"file\" id=\"res_image\" name=\"res_image\">
+                    </div>
                 </div>
                 
-                <div class=\"col-sm-12 col-md-12 col-lg-12 col-xl-12\">
+                <br>
+                <div class=\"col-sm-12 col-md-6 col-lg-6 col-xl-6\">
+                    <button type=\"submit\" value=\"$res_id\" name=\"edit_res\" class=\"btn btn-primary btn-block\">Edit</button>
+                </div>
+                <div class=\"col-sm-6 col-md-6 col-lg-6 col-xl-6\">
                     <button type=\"submit\" value=\"$res_id\" name=\"delete_r\" class=\"btn btn-danger btn-block\">Delete All Data of $res_name</button>
                 </div>
             </div>
-            <br>
+            <br><br>
         ";
     }
 }
-
 ?>
 
 

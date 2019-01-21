@@ -63,28 +63,6 @@ require_once "server/functions.php";
     <!--************************************CONTENT END*********************************-->
 
 
-    <!--SUBSCRIBE BOX-->
-    <div class="row">
-        <div class="col">
-            <div class="footer-mailchimp">
-                <div class="container text-center">
-                    <h5>Subscribe to our mailing list to receive an update when new resturant arrive!</h5>
-                    <div id="mc_embed_signup">
-                        <form role="form" action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="novalidate">
-                            <div class="input-group input-group-lg">
-                                <!--<input type="email" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Email address...">-->
-                                <span class="input-group-btn" style="margin: auto">
-                                    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-secondary">Subscribe!</button>
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--SUBSCRIBE BOX END-->
-
     <!--FOOTER START-->
     <?php
         include 'footer.php';

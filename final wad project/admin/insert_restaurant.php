@@ -86,8 +86,6 @@ if(isset($_POST['insert_res'])){
                     <input class="form-control" type="file" id="res_image" name="res_image">
                 </div>
             </div>
-        </div>
-        <div class="row my-3">
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
                 <label for="pro_price" class="float-md-right"> <span class="d-sm-none d-md-inline"> Restaurant </span> Address:</label>
             </div>
@@ -99,6 +97,8 @@ if(isset($_POST['insert_res'])){
                     <input class="form-control" id="res_address" name="res_address" placeholder="Enter Restaurant Address">
                 </div>
             </div>
+        </div>
+        <div class="row my-3">
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
                 <label for="pro_kw" class="float-md-right"><span class="d-sm-none d-md-inline"> Restaurant </span> Keywords:</label>
             </div>
@@ -110,8 +110,7 @@ if(isset($_POST['insert_res'])){
                     <input class="form-control" type="text" id="res_keywords" name="res_keywords" placeholder="Enter Restaurant Keywords">
                 </div>
             </div>
-        </div>
-        <div class="row my-3">
+
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto">
                 <label for="pro_desc" class="float-md-right"><span class="d-sm-none d-md-inline"> Restaurant </span> Detail:</label>
             </div>
@@ -126,7 +125,7 @@ if(isset($_POST['insert_res'])){
         </div>
         <div class="row my-3">
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
-            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
+            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-12">
                 <button type="submit" name="insert_res" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Add Restaurant </button>
             </div>
         </div>
