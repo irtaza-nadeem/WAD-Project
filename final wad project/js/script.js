@@ -281,6 +281,59 @@ function datacheck() {
         return false;
     }
 }
+
+
+
+
+
+function forget_password_check() {
+    var email = document.getElementById('email').value;
+    var check = true;
+
+    var email_check = /^([a-zA-Z])+(.|_)?([a-zA-Z])+(.|_)?(\d)*[@]((gmail)|(yahoo)|(facebook))(.com)/g;
+    var match_email = email.match(email_check);
+
+    if (email.length === 0) {
+        check = false;
+        document.getElementById("j").innerText = "";
+        document.getElementById("j").style.color = "#ff0000";
+        document.getElementById("j").innerHTML += "<br><br>" + "*Enter Email";
+
+    }
+
+    else {
+        if (match_email == null) {
+            check = false;
+            document.getElementById("j").innertext = "";
+            document.getElementById("j").style.color = "#ff0000";
+            document.getElementById("j").innerHTML += "<br>" + "*not a valid email";
+
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //saim space*/
 
 
