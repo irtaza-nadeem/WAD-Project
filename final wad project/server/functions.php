@@ -5,7 +5,6 @@
 require_once "db_connection.php";
 setdata();
 data_exits_or_not();
-//forget_password();
 /*azan space*/
 /**
  *
@@ -13,7 +12,7 @@ data_exits_or_not();
 function setdata()
 {
     global $con;
-    if(isset($_POST['reg_data']))
+   if(isset($_POST['reg_data']))
     {
         $firtname = $_POST['fname'];
         $lastname = $_POST['lname'];
@@ -21,15 +20,40 @@ function setdata()
         $dob = $_POST['trip-start'];
         $gender = $_POST['gen'];
         $email = $_POST['email'];
-        $insertQuery = "insert into registration(email,firstname,lastname,dob,gender,password)
-        values('$email','$firtname','$lastname','$dob','$gender','$password');";
-        $res = mysqli_query($con,$insertQuery);
-        if(!$res)
+        if (getemail() == true)
         {
-            echo "Not Executed";
+           // echo "<script language=\"javascript\"> alert(\"Email_already_existed\"); </script>";
+           // header("location:../registration_page.php");
+            echo "Already";
         }
-        header("location:../registration_page.php");
+        else{
+            $insertQuery = "insert into registration(email,firstname,lastname,dob,gender,password)
+            values('$email','$firtname','$lastname','$dob','$gender','$password');";
+            $res = mysqli_query($con,$insertQuery);
+            if(!$res)
+            {
+                echo "Not Executed";
+            }
+            echo "You are now Register";
+            /*echo "<script language=\"javascript\"> alert(\"You are now register\"); </script>";
+           header("location:../registration_page.php");*/
+        }
     }
+}
+function getemail()
+{
+    global $con;
+    $email = $_POST['email'];
+    $query="select email from registration where email='$email';";
+    $match_data = mysqli_query($con,$query);
+    while($row=mysqli_fetch_assoc($match_data)) {
+        $e1 = $row['email'];
+        if (strcmp($email,$e1)==0)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 /*azan space*/
@@ -130,9 +154,6 @@ function getnews()
 //saim space
 
 
-/**
- *
- */
 function data_exits_or_not()
 {
     global $con;
@@ -141,74 +162,33 @@ function data_exits_or_not()
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-
-        $query="select email,password from registration where email='$email' AND  password='$password'";
-        //$query1="select password from registration where  password='$password' ";
-
-
+        $query="select email,password from registration where email='$email' AND password= '$password';";
 
         $match_data = mysqli_query($con,$query);
-        $c = mysqli_num_rows($match_data);
-        //$match_data2 = mysqli_query($con,$query1);
-        if($c==0)
+        if(!$match_data)
         {
-            echo "you cant login";
+            echo "YOUR ACCOUNT DOESN'T EXISTS";
         }
-        else
-            {
-                echo "YOU have logged in successfully";
-
+        else if($match_data)
+        {
+            header("location:../index.php");
         }
-
-
 
     }
 }
 
-//function forget_password()
-//{
-//
-////    if(isset($_POST['recover-submit']))
-////        {
-////            $subject="HELLO SIR";
-////            $headers = "From: reservit@world.com" . "\r\n";
-////                $email = $_POST['email'];
-////                //$password = $_POST['password'];
-////                $msg = "YOUR PASSWORD IS " ;
-////                mail($email,$subject,$msg,$headers);
-////
-////
-////        }
-//    if(isset($_POST['recover-submit']))
-//    {
-//        $mailto = $_POST['email33'];
-//
-//        $mailSub = "HELLLLO SIRRRRR";
-//        $mailMsg = "YOUR PASSWORD IS";
-//        require 'PHPMailer-master/PHPMailerAutoload.php';
-//        $mail = new PHPMailer();
-//        $mail->IsSmtp();
-//        $mail->SMTPDebug = 1;
-//        $mail->SMTPAuth = true;
-//        $mail->SMTPSecure = 'ssl';
-//        $mail->Host = "smtp.gmail.com";
-//        $mail->Port = 465; // or 587
-//        $mail->IsHTML(true);
-//    $mail ->Username = "saimmalik8397@gmail.com";
-//    $mail ->Password =  ;
-//        $mail->SetFrom( "saimmalik8397@gmail.com");
-//        $mail->Subject = $mailSub;
-//        $mail->Body = $mailMsg;
-//        $mail->AddAddress($mailto);
-//
-//        if (!$mail->Send()) {
-//            echo "Mail Not Sent";
-//        }
-//        else {
-//            echo "Mail Sent";
-//        }
-//    }
-//}
+function forget_password()
+{
+
+
+    $email=$_POST['email'];
+
+    $password=$_POST['password'];
+
+    $msg= "YOUR PASSWORD IS ". $password;
+    mail($email,"WELCOME TO RESERVEIT",$msg);
+
+}
 
 
 

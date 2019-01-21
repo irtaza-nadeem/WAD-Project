@@ -28,7 +28,7 @@ function processString()
     var name = /[a-zA-Z][^#&<>\"~;$^%{}?,!@/()'\-_.\\|"+*!/=[\]0-9]{0,20}$/g;
     var pass = /[a-zA-Z#&<>\"~;$^%{}?,!@/()'\-_.\\|"+*/=[\]0-9]{8,20}$/g;
     //var date = /^(19[7-9]\d|20[0-1][0-9])[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$/g;
-    var c_email = /^([a-zA-Z])+(.|_)?([a-zA-Z])+(.|_)?(\d)*[@]((gmail)|(yahoo)|(facebook))(.com)$/g;
+    var c_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((gmail)|(hotmail)|(yahoo))\.com$/g;
     var res_name = firtname.match(name);
     var res_last = lastname.match(name);
     var res_pass = password.match(pass);
@@ -81,6 +81,7 @@ function processString()
             errormsg1.innerText = "";
         }
     }
+
     if(email.length === 0)
     {
         check = false;
@@ -104,6 +105,8 @@ function processString()
             errormsg4.innerText =  "";
         }
     }
+
+
     if (dob.length === 0)
     {
         check = false;
@@ -190,7 +193,8 @@ function processString()
     }
     if (check === true)
     {
-        setTimeout(function(){alert("You are Now Registr!!!")},5);
+        //setTimeout(function(){alert("You are Now Registeeeeeeer!!!")},5);
+        return true;
     }
     else{
         return false;

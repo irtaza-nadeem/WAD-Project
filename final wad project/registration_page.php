@@ -15,7 +15,6 @@ require_once "server/functions.php";
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/final.css">
 </head>
-
 <body>
 
 <!--************************************HEADER START*********************************-->

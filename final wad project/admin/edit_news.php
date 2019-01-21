@@ -18,6 +18,8 @@ if(isset($_POST['edit_n']))
     $news_id = $_POST['edit_n'];
     $latest_news = $_POST['edit_news'];
 
+    $news_i = $_POST['delete_n'];
+
     $edit_n = "update news set news='$latest_news' where id='$news_id';";
     $edit_news = mysqli_query($con, $edit_n);
 
@@ -38,13 +40,13 @@ function showNews()
         $news = $row['news'];
         echo
         "
-            <div class=\"row\">
+            <div class='row'>
                 <div class=\"d-sm-block col-md-2 col-lg-1 col-xl-1\">
                     <label for=\"editnews\" class=\"float-md-right\"> <span class=\"d-sm-none d-md-inline\"> News: </span></label>
                 </div>
                 
                 <div class=\"col-sm-12 col-md-8 col-lg-8 col-xl-8\">
-                    <textarea class=\"form-control\" type=\"file\" id=\"ins_news\" name=\"edit_news\">$news</textarea>
+                    <textarea class=\"form-control\" type=\"file\" id=\"edit_news\" name=\"edit_news\">$news</textarea>
                 </div>
                 
                 <div class=\"col-sm-1 col-md-1 col-lg-1 col-xl-1\">
