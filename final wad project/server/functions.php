@@ -165,14 +165,18 @@ function data_exits_or_not()
         $query="select email,password from registration where email='$email' AND password= '$password';";
 
         $match_data = mysqli_query($con,$query);
-        if(!$match_data)
+
+        $c=mysqli_num_rows($match_data);
+
+        if($c==0)
         {
             echo "YOUR ACCOUNT DOESN'T EXISTS";
         }
-        else if($match_data)
-        {
+        else
+            {
             header("location:../index.php");
-        }
+            echo"YOU have logged in successfully";
+            }
 
     }
 }
