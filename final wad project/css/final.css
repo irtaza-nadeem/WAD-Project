@@ -693,4 +693,13 @@ input{
     text-align: left
 }
 
+.error_msg
+{
+    color:white;
 
+}
+.success_msg
+{
+    color:deepskyblue;
+
+}

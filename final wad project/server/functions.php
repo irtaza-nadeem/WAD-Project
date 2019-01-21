@@ -203,6 +203,24 @@ function forget_password()
 
 
 
-/*tahreem space
+//tahreem space
 
-tahreem space*/
+function contact_us()
+{
+    global $con;
+    $name = $_POST['client_name'];
+    $email = $_POST['client_email'];
+    $num   = $_POST['client_number'];
+    $msg   = $_POST['client_msg'];
+
+    $insertQuery = "insert into contacts(name,email,phoneno,message)
+        values('$name','$email','$num','$msg')";
+    $contacts = mysqli_query($con,$insertQuery);
+    if(!$contacts)
+    {
+        echo "Not Executed";
+    }
+    header("../contact_us.php");
+}
+
+//tahreem space*

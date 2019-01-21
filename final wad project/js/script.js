@@ -281,44 +281,38 @@ function datacheck() {
         return false;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //saim space*/
 
 
 
 
+
+//tahreem space
+
 function contactus_name()
 {
     //alert("hello");
     var name = /[a-zA-Z][^#&<>\"~;$^%{}?,!@/()'\-_.\\|"+*!/=[\]0-9]{1,20}$/g;
-
     var client_name = document.getElementById('client_name').value;
-
     //alert(name);
     var res_name = client_name.match(name);
-
+    document.getElementById("name_error_msg").innerText = "";
     if(client_name.length === 0)
     {
         document.getElementById("name_error_msg").innerHTML += "<br>" + "Enter your name";
+        return false;
     }
     else
     {
         if(res_name==null)
         {
             document.getElementById("name_error_msg").innerHTML += "<br>" + "Invalid Format only alphabets are allowed";
+            return false;
+        }
+        else
+        {
+            document.getElementById("name_error_msg").innerText = "";
+            return true;
         }
     }
 }
@@ -329,19 +323,25 @@ function contactus_email()
     var email = /^([a-zA-Z])+(.|_)?([a-zA-Z])+(.|_)?(\d)*[@]([a-zA-Z])+(.|_)?([a-zA-Z])(.com)/g;
 
     var client_email = document.getElementById('client_email').value;
-
-    //alert(name);
+    document.getElementById("email_error_msg").innerText = "";
     var res_name = client_email.match(email);
 
     if(client_email.length === 0)
     {
         document.getElementById("email_error_msg").innerHTML += "<br>" + "Enter your email";
+        return false;
     }
     else
     {
         if(res_name==null)
         {
             document.getElementById("email_error_msg").innerHTML += "<br>" + "Invalid Email";
+            return false;
+        }
+        else
+        {
+            document.getElementById("email_error_msg").innerText = "";
+            return true;
         }
     }
 }
@@ -352,6 +352,7 @@ function contactus_number()
     var number = /^(03\d{2}|\+92(3\d{2}|\s3\d{2}|\-3\d{2})|0092(3\d{2}|\s3\d{2}|\-3\d{2}))(\s|\-)?\d{7}/g;
 
     var client_number = document.getElementById('client_number').value;
+    document.getElementById("number_error_msg").innerText = "";
 
     //alert(name);
     var res_name = client_number.match(number);
@@ -359,38 +360,38 @@ function contactus_number()
     if(client_number.length === 0)
     {
         document.getElementById("number_error_msg").innerHTML += "<br>" + "Enter your number";
+        return false;
     }
     else
     {
         if(res_name==null)
         {
             document.getElementById("number_error_msg").innerHTML += "<br>" + "Invalid number";
+            return false;
+        }
+        else
+        {
+            document.getElementById("number_error_msg").innerText = "";
+            return true;
         }
     }
 }
 
 function contactus_msg()
 {
-    //alert("hello");
-    //var msg;
-
     var client_msg = document.getElementById('client_msg').value;
-
-    //alert(name);
-
-
+    document.getElementById("msg_error_msg").innerText = "";
     if(client_msg.length === 0)
     {
-        // alert("hello")
         document.getElementById("msg_error_msg").innerHTML += "<br>" + "Enter your Message";
+        return false;
     }
     else
     {
-        if(res_name==null)
-        {
-            document.getElementById("msg_error_msg").innerHTML += "<br>" + "Invalid Message";
-        }
+        document.getElementById("msg_error_msg").innerText = "";
+        return true;
     }
 }
+
 
 //tahreem space*/
