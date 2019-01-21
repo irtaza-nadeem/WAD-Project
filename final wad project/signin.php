@@ -45,19 +45,21 @@ require_once "server/functions.php";
 
         <div>
             <div>
-                <div style="padding-top: 30px" class="row">
-                    <div class="col-1" style="padding-top: 10px"><i class="fas fa-envelope"></i></div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Email Address">
+                <form action="server/functions.php" method="POST" onsubmit="return datacheck()" class="myform">
+                    <div style="padding-top: 30px" class="row">
+                        <div class="col-1" style="padding-top: 10px"><i class="fas fa-envelope"></i></div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="e" name="email" placeholder="Email Address">
+                        </div>
                     </div>
-                </div>
 
-                <div style="padding-top: 0px" class="row">
-                    <div class="col-1" style="padding-top: 10px"><i class="fas fa-key"></i></div>
-                    <div class="col">
-                        <input type="text" class="form-control" id="password" name="password" placeholder="Password">
+                    <div style="padding-top: 0px" class="row">
+                        <div class="col-1" style="padding-top: 10px"><i class="fas fa-key"></i></div>
+                        <div class="col">
+                            <input type="password" class="form-control" id="p" name="password" placeholder="Password">
+                        </div>
                     </div>
-                </div>
+
             </div>
 
             <div class="row" style="padding-top: 5px">
@@ -68,17 +70,18 @@ require_once "server/functions.php";
                 </div>
 
                 <div class="col-auto">
-                    <input class="btn btn-primary" type="submit" name="login" value="Login" onclick="datacheck()">
+                    <input type="submit" class="btn btn-primary" value="Login" name="login">
                 </div>
 
-                <div>
-                    <p id="s">
+                <div class="col-10">
 
-
+                    <p id="s" align="center">
                     </p>
+
                 </div>
 
             </div>
+            </form>
         </div>
     </div>
 

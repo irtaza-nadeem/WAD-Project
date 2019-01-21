@@ -3,29 +3,59 @@
 <html lang="en">
 <?php
 require_once "db_connection.php";
-
+setdata();
+data_exits_or_not();
 /*azan space*/
+/**
+ *
+ */
 function setdata()
 {
     global $con;
-    if(isset($_POST['reg_data']))
+   if(isset($_POST['reg_data']))
     {
         $firtname = $_POST['fname'];
-        $lastname = $_POST['lanme'];
+        $lastname = $_POST['lname'];
         $password = $_POST['pw'];
-        $dob = $_POST['start_trip'];
+        $dob = $_POST['trip-start'];
         $gender = $_POST['gen'];
         $email = $_POST['email'];
-
-        $insertQuery = "insert into registration(email,firstname,lastname,gender,dob,password)
-        values('$email','$firtname','$lastname','$dob','$gender','$password');";
-        $res = mysqli_query($con,$insertQuery);
-        if(!$res)
+        if (getemail() == true)
         {
-            echo "Not Executed";
+           // echo "<script language=\"javascript\"> alert(\"Email_already_existed\"); </script>";
+           // header("location:../registration_page.php");
+            echo "Already";
+        }
+        else{
+            $insertQuery = "insert into registration(email,firstname,lastname,dob,gender,password)
+            values('$email','$firtname','$lastname','$dob','$gender','$password');";
+            $res = mysqli_query($con,$insertQuery);
+            if(!$res)
+            {
+                echo "Not Executed";
+            }
+            echo "You are now Register";
+            /*echo "<script language=\"javascript\"> alert(\"You are now register\"); </script>";
+           header("location:../registration_page.php");*/
         }
     }
 }
+function getemail()
+{
+    global $con;
+    $email = $_POST['email'];
+    $query="select email from registration where email='$email';";
+    $match_data = mysqli_query($con,$query);
+    while($row=mysqli_fetch_assoc($match_data)) {
+        $e1 = $row['email'];
+        if (strcmp($email,$e1)==0)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 /*azan space*/
 
 
@@ -132,11 +162,31 @@ function data_exits_or_not()
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $query="select email,password from registration where email=$email AND password=$password ";
+        $query="select email,password from registration where email='$email' AND password= '$password';";
 
+        $match_data = mysqli_query($con,$query);
+        if(!$match_data)
+        {
+            echo "YOUR ACCOUNT DOESN'T EXISTS";
+        }
+        else if($match_data)
+        {
+            header("location:../index.php");
+        }
 
     }
+}
 
+function forget_password()
+{
+
+
+    $email=$_POST['email'];
+
+    $password=$_POST['password'];
+
+    $msg= "YOUR PASSWORD IS ". $password;
+    mail($email,"WELCOME TO RESERVEIT",$msg);
 
 }
 
