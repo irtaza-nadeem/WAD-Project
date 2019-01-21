@@ -2,6 +2,10 @@
 <?php
 require_once "server/functions.php";
 //require_once  "js/script.js";
+if(isset($_POST['submit']))
+{
+    contact_us();
+}
 ?>
 
 <html lang="en">
@@ -78,7 +82,7 @@ require_once "server/functions.php";
         <div class="col contact_us_container m-0 ">
             <div class="form_container col-lg-5 col-md-6 col-sm-12 col-xs-12" >
 
-                <form class="contact_form" >
+                <form class="contact_form" method="POST" action="#">
                     <h4 >Write Us</h4>
                     <input class="contact_input" type="text" name="client_name" id="client_name" placeholder="Name"  onblur="contactus_name()">
                     <span class="error_msg" id="name_error_msg"></span>
@@ -89,10 +93,10 @@ require_once "server/functions.php";
                     <input class="contact_input" type="text" name="client_number" id="client_number" placeholder="Number" onblur="contactus_number()">
                     <span class="error_msg" id="number_error_msg"></span>
 
-                    <textarea class="contact_text_area" id="client_msg" placeholder="Your message here..." onblur="contactus_msg()"></textarea>
+                    <textarea class="contact_text_area" name="client_msg" id="client_msg" placeholder="Your message here..." onblur="contactus_msg()"></textarea>
                     <span class="error_msg" id="msg_error_msg"></span>
 
-                    <input class="submit_button" type="submit" name="submit"  value="Refresh Page" onClick="window.location.reload()">
+                    <input class="submit_button" type="submit" name="submit"  value="Send Message" onClick="window.location.reload()">
                     <span class="success_msg" id="msg"></span>
                 </form>
             </div>
