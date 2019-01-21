@@ -37,7 +37,7 @@ if(isset($_POST['submit']))
     <?php
         include 'header.php';
     ?>
-    ?>
+
     <!-- ****************************CONTACT US BEGINS HERE*****************************-->
     <div class="row">
         <div class="col">

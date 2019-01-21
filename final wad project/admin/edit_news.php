@@ -13,34 +13,42 @@ if(isset($_POST['delete_n']))
         header("location: ".$_SERVER['PHP_SELF']);
     }
 }
+
 if(isset($_POST['edit_n']))
 {
     $news_id = $_POST['edit_n'];
     $latest_news = $_POST['edit_news'];
 
-    $news_i = $_POST['delete_n'];
+    $edit_n2 = "update news set news='$latest_news' where id='$news_id';";
+    $edit_news2 = mysqli_query($con, $edit_n2);
 
-    $edit_n = "update news set news='$latest_news' where id='$news_id';";
-    $edit_news = mysqli_query($con, $edit_n);
-
-    if($edit_news)
+    if($edit_news2)
     {
         header("location: ".$_SERVER['PHP_SELF']);
     }
 }
 
+
+
+function array_push_assoc(&$array, $key, $value){
+    $array[$key] = $value;
+    return $array;
+}
+
 function showNews()
 {
     global $con;
+    global $myarray;
     $show_n = "select * from news;";
     $show_news = mysqli_query($con, $show_n);
+
 
     while($row=mysqli_fetch_assoc($show_news)){
         $news_id = $row['id'];
         $news = $row['news'];
+
         echo
-        "
-            <div class='row'>
+        "<div class='row'>
                 <div class=\"d-sm-block col-md-2 col-lg-1 col-xl-1\">
                     <label for=\"editnews\" class=\"float-md-right\"> <span class=\"d-sm-none d-md-inline\"> News: </span></label>
                 </div>
@@ -57,8 +65,7 @@ function showNews()
                     <button type=\"submit\" value=\"$news_id\" name=\"delete_n\" class=\"btn btn-danger btn-block\">Delete</button>
                 </div>
             </div>
-            <br>
-        ";
+            <br>";
     }
 }
 ?>
