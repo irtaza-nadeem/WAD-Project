@@ -10,13 +10,21 @@ if(isset($_POST['insert_res'])){
     //getting image from the field
     $pro_image = $_FILES['res_image']['name'];
     $pro_image_tmp = $_FILES['res_image']['tmp_name'];
-    move_uploaded_file($pro_image_tmp,"restaurant_images/$pro_image");
+    echo "";
+    $ext = strtolower(pathinfo($pro_image,PATHINFO_EXTENSION));
 
-    $insert_restaurant = "INSERT into restaurants (name, address, description, keywords, category, image)
+    if($ext !== "png" && $ext !== "jpg" && $ext !== "jpeg")
+    {
+        echo "FILE IS NOT IMAGE";
+    }
+    else {
+        move_uploaded_file($pro_image_tmp,"restaurant_images/$pro_image");
+        $insert_restaurant = "INSERT into restaurants (name, address, description, keywords, category, image)
                   VALUES ('$res_title','$res_address','$res_desc','$res_keywords', '$res_cat','$pro_image');";
-    $insert_res = mysqli_query($con, $insert_restaurant);
-    if($insert_res){
-        header("location: ".$_SERVER['PHP_SELF']);
+        $insert_res = mysqli_query($con, $insert_restaurant);
+        if ($insert_res) {
+            header("location: " . $_SERVER['PHP_SELF']);
+        }
     }
 }
 ?>
