@@ -75,7 +75,7 @@ function get_restaurants()
     }
     else if(isset($_GET['search'])){
         $user_query = $_GET['search'];
-        $getProQuery = "select * from products where keywords like '%$user_query%'";
+        $getProQuery = "select * from restaurants where keywords like '%$user_query%'";
     }
     $getProResult = mysqli_query($con,$getProQuery);
     $count_pro = mysqli_num_rows($getProResult);

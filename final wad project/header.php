@@ -19,6 +19,33 @@ require_once "server/functions.php";
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/final.css">
 
+    <script>
+        function checkSearch(str) {
+            if (str.length == 0)
+            {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("content").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "searchzero.php?e=" + str, true);
+                xmlhttp.send();
+            }
+            else
+            {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("content").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "search.php?e=" + str, true);
+                xmlhttp.send();
+            }
+        }
+    </script>
+
 </head>
 
 <body>
@@ -56,7 +83,7 @@ require_once "server/functions.php";
             </li>
             <div class="search-container">
                 <form>
-                    <input type="text" placeholder="Search.." name="search">
+                    <input type="text" placeholder="Search Restaurants" name="search" onkeyup="checkSearch(this.value)">
                     <button type="submit"><i class="fa fa-search"></i> </button>
                 </form>
             </div>

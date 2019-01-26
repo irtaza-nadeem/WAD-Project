@@ -53,8 +53,8 @@ require_once "server/functions.php";
                 </li>
             </ul>
         </nav>
-        <article id="content" class="container-fluid bg-white">
-            <div class="row align-content-center">
+        <article class="container-fluid bg-white">
+            <div id="content"  class="row align-content-center">
                 <?php get_restaurants(); ?>
             </div>
         </article>
