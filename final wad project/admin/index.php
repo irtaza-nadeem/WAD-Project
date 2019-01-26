@@ -1,5 +1,7 @@
 <?php
 require_once "../server/db_connection.php";
+$u = "";
+$p = "";
 if(isset($_POST['admin_login']))
 {
     $user = $_POST['admin_user'];
