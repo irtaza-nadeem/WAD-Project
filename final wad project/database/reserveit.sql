@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 20, 2019 at 07:47 AM
+-- Generation Time: Jan 26, 2019 at 01:40 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -25,6 +25,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `id` int(11) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`id`, `username`, `password`) VALUES
+(1, 'root', 'root');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `categories`
 --
 
@@ -32,6 +51,14 @@ CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
   `title` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `title`) VALUES
+(3, 'italian'),
+(4, 'pakistani');
 
 -- --------------------------------------------------------
 
@@ -63,7 +90,9 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `news`) VALUES
-(1, 'asdfghjk');
+(2, 'irtaza'),
+(3, 'abc'),
+(4, 'efgh');
 
 -- --------------------------------------------------------
 
@@ -96,6 +125,16 @@ CREATE TABLE `restaurants` (
   `image` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `restaurants`
+--
+
+INSERT INTO `restaurants` (`id`, `name`, `address`, `description`, `keywords`, `category`, `image`) VALUES
+(3, 'irtaza', 'irtaza', 'irtaza', 'irtaza', '4', '10898178_1522605291323619_2233665488724979098_n.jpg'),
+(5, 'Howdy', 'Howdy', 'Howdy', 'Howdy', '3', 'index.jpg'),
+(6, 'KFC', 'KFC', 'KFC', 'KFC', '4', 'kfc.jpg'),
+(7, 'Arcadian', 'Arcadian', 'Arcadian', 'Arcadian', '3', 'arcadian.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -109,6 +148,12 @@ CREATE TABLE `subscribers` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `categories`
@@ -151,10 +196,16 @@ ALTER TABLE `subscribers`
 --
 
 --
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -166,13 +217,13 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `restaurants`
 --
 ALTER TABLE `restaurants`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
