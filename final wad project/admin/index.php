@@ -107,8 +107,6 @@ if(isset($_POST['admin_login']))
         </div>
     </form>
 </div>
-<script src="../js/jquery-3.3.1.js"></script>
-<script src="../js/bootstrap.bundle.js"></script>
 </body>
 </html>
 
