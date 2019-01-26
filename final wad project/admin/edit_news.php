@@ -19,6 +19,12 @@ if(isset($_POST['edit_n']))
     $news_id = $_POST['edit_n'];
     $latest_news = $_POST['edit_news2'];
 
+    if(strlen($latest_news) == 0)
+    {
+        header("location: ".$_SERVER['PHP_SELF']);
+        return;
+    }
+
     $edit_n2 = "update news set news='$latest_news' where id='$news_id';";
     $edit_news2 = mysqli_query($con, $edit_n2);
 
