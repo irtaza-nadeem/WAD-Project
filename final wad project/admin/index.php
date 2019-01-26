@@ -1,14 +1,7 @@
 <?php
 require_once "../server/db_connection.php";
-$username = "root";
-$password = "root";
-$u = "";
-$p = "";
-
-if(isset($_POST['insert_pro']))
+if(isset($_POST['admin_login']))
 {
-    $u = "";
-    $p = "";
     $user = $_POST['admin_user'];
     $pass = $_POST['admin_password'];
 
@@ -21,9 +14,14 @@ if(isset($_POST['insert_pro']))
         $p = "<b>Password Required</b>";
     }
 
-    if((strcmp($username, $user) == 0) && (strcmp($password, $pass) == 0))
-    {
-        header("Location: menu.php");
+    $q = "select * from admins where username='$user' and password='$pass';";
+    $qn = mysqli_query($con, $q);
+    $check_user = mysqli_num_rows($qn);
+    if($check_user==0){
+        $error_msg = 'Password or Email is wrong, try again';
+    }
+    else{
+        header('location: menu.php');
     }
 }
 ?>
@@ -73,7 +71,7 @@ if(isset($_POST['insert_pro']))
         <div class="row my-3">
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-4 mt-auto"></div>
             <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
-                <button type="submit" name="insert_pro" class="btn btn-primary btn-block">Login</button>
+                <button type="submit" name="admin_login" class="btn btn-primary btn-block">Login</button>
             </div>
         </div>
     </form>

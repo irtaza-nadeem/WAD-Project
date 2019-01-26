@@ -17,7 +17,7 @@ if(isset($_POST['delete_n']))
 if(isset($_POST['edit_n']))
 {
     $news_id = $_POST['edit_n'];
-    $latest_news = $_POST['edit_news'];
+    $latest_news = $_POST['edit_news2'];
 
     $edit_n2 = "update news set news='$latest_news' where id='$news_id';";
     $edit_news2 = mysqli_query($con, $edit_n2);
@@ -28,6 +28,7 @@ if(isset($_POST['edit_n']))
     }
 }
 
+
 function array_push_assoc(&$array, $key, $value){
     $array[$key] = $value;
     return $array;
@@ -36,11 +37,12 @@ function array_push_assoc(&$array, $key, $value){
 function showNews()
 {
     global $con;
-    global $myarray;
     $show_n = "select * from news;";
     $show_news = mysqli_query($con, $show_n);
 
 
+    echo "<label for=\"editnews\" class=\"float-md-left\"> <span class=\"d-sm-none d-md-inline\"> Enter Latest News: </span></label>
+            <textarea class=\"form-control\" type=\"file\" id=\"edit_news2\" name=\"edit_news2\"></textarea> <br>";
     while($row=mysqli_fetch_assoc($show_news)){
         $news_id = $row['id'];
         $news = $row['news'];
@@ -52,7 +54,7 @@ function showNews()
                 </div>
                 
                 <div class=\"col-sm-12 col-md-8 col-lg-8 col-xl-8\">
-                    <textarea class=\"form-control\" type=\"file\" id=\"edit_news\" name=\"edit_news\">$news</textarea>
+                    <textarea class=\"form-control\" type=\"file\" id=\"edit_news\" name=\"edit_news\" readonly>$news</textarea>
                 </div>
                 
                 <div class=\"col-sm-1 col-md-1 col-lg-1 col-xl-1\">
