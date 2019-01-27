@@ -1,5 +1,8 @@
 <?php
 require_once "../server/db_connection.php";
+if(!isset($_SESSION['admin_user'])){
+    header('location: index.php?not_admin=You are not Admin!');
+}
 
 if(isset($_POST['delete_n']))
 {
@@ -96,6 +99,9 @@ function showCategories()
 </head>
 <body>
 <div class="container-fluid">
+    <?php
+    include 'logout.php';
+    ?>
     <h1 class="text-center my-4"> <span class="d-none d-sm-inline"> Edit </span> Categories </h1>
     <form action="edit_category.php" method="post" enctype="multipart/form-data">
         <?php showCategories(); ?>

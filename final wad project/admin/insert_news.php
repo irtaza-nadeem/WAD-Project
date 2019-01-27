@@ -1,5 +1,8 @@
 <?php
 require_once "../server/db_connection.php";
+if(!isset($_SESSION['admin_user'])){
+    header('location: index.php?not_admin=You are not Admin!');
+}
 
 if(isset($_POST['insert_pro']))
 {
@@ -31,6 +34,9 @@ if(isset($_POST['insert_pro']))
 </head>
 <body>
 <div class="container">
+    <?php
+    include 'logout.php';
+    ?>
     <h1 class="text-center my-4"> <span class="d-none d-sm-inline"> Insert </span> News </h1>
     <form action="insert_news.php" method="post" enctype="multipart/form-data">
         <div class="row">

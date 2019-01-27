@@ -1,5 +1,9 @@
 <?php
 require_once "../server/db_connection.php";
+if(!isset($_SESSION['admin_user'])){
+    header('location: index.php?not_admin=You are not Admin!');
+}
+
 if(isset($_POST['insert_res'])){
     $res_title = $_POST['res_title'];
     $res_cat = $_POST['res_cat'];
@@ -45,6 +49,9 @@ if(isset($_POST['insert_res'])){
 </head>
 <body>
 <div class="container">
+    <?php
+    include 'logout.php';
+    ?>
     <h1 class="text-center my-4"> <span class="d-none d-sm-inline"> Add New </span> Restaurant </h1>
     <form action="insert_restaurant.php" method="post" enctype="multipart/form-data">
         <div class="row">

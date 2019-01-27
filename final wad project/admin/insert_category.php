@@ -1,5 +1,8 @@
 <?php
 require_once "../server/db_connection.php";
+if(!isset($_SESSION['admin_user'])){
+    header('location: index.php?not_admin=You are not Admin!');
+}
 
 if(isset($_POST['insert_cat']))
 {
@@ -29,6 +32,9 @@ if(isset($_POST['insert_cat']))
 </head>
 <body>
 <div class="container">
+    <?php
+    include 'logout.php';
+    ?>
     <h1 class="text-center my-4"> <span class="d-none d-sm-inline"> Add </span> Category </h1>
     <form action="insert_category.php" method="post" enctype="multipart/form-data">
         <div class="row">

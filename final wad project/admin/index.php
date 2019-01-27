@@ -59,6 +59,7 @@ if(isset($_POST['admin_login']))
 </head>
 <body>
 <div class="container">
+
     <h1 class="text-center my-4"> <span class="d-none d-sm-inline"> Admin </span> Login </h1>
     <form action="index.php" method="post" enctype="multipart/form-data">
         <div class="text-center"><?php echo $error_msg;?></div>
