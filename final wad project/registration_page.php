@@ -15,6 +15,25 @@ require_once "server/functions.php";
     <link rel="stylesheet" href="bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/final.css">
 </head>
+<script>
+    function check_email(str)
+    {
+        if (str.length == 0) {
+            document.getElementById("msg4").innerHTML = "";
+            return;
+        } else {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("msg4").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "check_email.php?e=" + str, true);
+            xmlhttp.send();
+            //document.getElementById('hint').innerHTML = 'loading...';
+        }
+    }
+</script>
 <body>
 
 <!--************************************HEADER START*********************************-->
@@ -77,7 +96,7 @@ require_once "server/functions.php";
                     </div>
                     <div class="col-12">
                         <label for="email"><i class="fas fa-envelope"></i><b> Email</b></label>
-                        <input type="text" class="form-control" id="e" name="email" placeholder="Enter Email" name="email">
+                        <input type="text" class="form-control" id="e" name="email" placeholder="Enter Email" name="email" onkeyup="check_email(this.value)">
                         <div id="msg4"></div>
                     </div>
                     <div class="col-md-6">
