@@ -1,5 +1,6 @@
 <?php
 require_once "../server/db_connection.php";
+session_start();
 if(!isset($_SESSION['admin_user'])){
     header('location: index.php?not_admin=You are not Admin!');
 }

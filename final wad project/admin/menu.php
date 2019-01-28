@@ -1,33 +1,37 @@
 <?php
 require_once "../server/db_connection.php";
+session_start();
 if(!isset($_SESSION['admin_user'])){
     header('location: index.php?not_admin=You are not Admin!');
 }
-
-if(isset($_POST['insert_res']))
+else
 {
+    if(isset($_POST['insert_res']))
+    {
         header("Location: insert_restaurant.php");
+    }
+    else if(isset($_POST['edit_res']))
+    {
+        header("Location: edit_restaurants.php");
+    }
+    else if(isset($_POST['insert_news']))
+    {
+        header("Location: insert_news.php");
+    }
+    else if(isset($_POST['edit_news']))
+    {
+        header("Location: edit_news.php");
+    }
+    else if(isset($_POST['insert_cat']))
+    {
+        header("Location: insert_category.php");
+    }
+    else if(isset($_POST['edit_cat']))
+    {
+        header("Location: edit_category.php");
+    }
 }
-else if(isset($_POST['edit_res']))
-{
-    header("Location: edit_restaurants.php");
-}
-else if(isset($_POST['insert_news']))
-{
-    header("Location: insert_news.php");
-}
-else if(isset($_POST['edit_news']))
-{
-    header("Location: edit_news.php");
-}
-else if(isset($_POST['insert_cat']))
-{
-    header("Location: insert_category.php");
-}
-else if(isset($_POST['edit_cat']))
-{
-    header("Location: edit_category.php");
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
