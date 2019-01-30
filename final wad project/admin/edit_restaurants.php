@@ -40,19 +40,7 @@ category='$res_cat' where id='$res_id';";
         header("location: ".$_SERVER['PHP_SELF']);
     }
 }
-/*if(isset($_POST['edit_res']))
-{
-    $res_id = $_POST['edit_res'];
 
-    $edit_n = "update news set news='$latest_news' where id='$news_id';";
-    $edit_news = mysqli_query($con, $edit_n);
-
-    if($edit_news)
-    {
-        header("location: ".$_SERVER['PHP_SELF']);
-    }
-}*/
-/****************************************/
 
 function showRestaurantData()
 {
