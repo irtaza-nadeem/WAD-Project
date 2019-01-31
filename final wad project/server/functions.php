@@ -34,7 +34,8 @@ function setdata()
             {
                 echo "Not Executed";
             }
-            echo "You are now Register";
+            //echo "You are now Register";
+            header("location: ../index.php");
             /*echo "<script language=\"javascript\"> alert(\"You are now register\"); </script>";
            header("location:../registration_page.php");*/
         }

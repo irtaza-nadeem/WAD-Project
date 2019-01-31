@@ -14,17 +14,14 @@ require_once "../server/functions.php";
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-
-
+    
     <link rel="stylesheet" href="../bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/final.css">
 </head>
 
 <body>
 
-<!--************************************HEADER START*********************************-->
 
-<!--LOGO-->
 <div class="row mb-3 mb-sm-0">
     <div class="col-sm-6 text-center text-sm-right">
         <div class="btn-group mt-sm-2" >
@@ -32,8 +29,6 @@ require_once "../server/functions.php";
         </div>
     </div>
 </div>
-
-<!--************************************HEADER END*********************************-->
 
 <!--END-->
 
