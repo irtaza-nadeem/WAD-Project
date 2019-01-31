@@ -55,7 +55,7 @@ require_once "server/functions.php";
             </li>
             <div class="search-container">
                 <form>
-                    <input type="text" placeholder="Search Restaurants" name="search" onkeyup="checkSearch(this.value)">
+                    <input type="text" placeholder="Search Restaurants" name="search">
                     <button type="submit"><i class="fa fa-search"></i> </button>
                 </form>
             </div>

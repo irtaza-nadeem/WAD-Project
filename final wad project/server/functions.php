@@ -174,13 +174,14 @@ function data_exits_or_not()
         }
         else
             {
-                session_start();
+                //session_start();
                 if(!empty($_POST["remember"]))
                 {
                     setcookie ("member_login",$email,time()+ (10 * 365 * 24 * 60 * 60));
                     setcookie ("member_password",$password,time()+ (10 * 365 * 24 * 60 * 60));
                     $_SESSION["admin_name"] = $email;
                 }
+
 
                 else {
                     if (isset($_COOKIE["member_login"])) {
@@ -190,7 +191,7 @@ function data_exits_or_not()
                         setcookie("member_password", "");
                     }
                 }
-                header("location:../loginscreen.php");
+                    header("location:../loginscreen.php");
             }
 
 

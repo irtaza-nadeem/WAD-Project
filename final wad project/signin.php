@@ -35,6 +35,36 @@ require_once "server/functions.php";
 
 
 <!--************************************CONTENT START*********************************-->
+    <script>
+        function check_email_login(str)
+        {
+            if (str.length == 0) {
+                document.getElementById("no").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("no").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "login_email_check.php?e=" + str, true);
+                xmlhttp.send();
+                //document.getElementById('hint').innerHTML = 'loading...';
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
 
 
     <div class="box center" style="margin-bottom: 15px; margin-top: 15px">
@@ -49,8 +79,12 @@ require_once "server/functions.php";
                     <div style="padding-top: 30px" class="row">
                         <div class="col-1" style="padding-top: 10px"><i class="fas fa-envelope"></i></div>
                         <div class="col">
-                            <input type="text" class="form-control" id="e" name="email" placeholder="Email Address" value="<?php if(isset($_COOKIE["member_login"])) { echo $_COOKIE["member_login"]; } ?>">
+                            <input type="text" class="form-control" id="e" name="email" placeholder="Email Address" value="<?php if(isset($_COOKIE["member_login"])) { echo $_COOKIE["member_login"]; } ?>" onkeyup="check_email_login(this.value)">
+
                         </div>
+                        <div id="no">
+                    </div>
+
                     </div>
 
                     <div style="padding-top: 0px" class="row">
