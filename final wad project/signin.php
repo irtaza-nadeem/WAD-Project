@@ -49,15 +49,19 @@ require_once "server/functions.php";
                     <div style="padding-top: 30px" class="row">
                         <div class="col-1" style="padding-top: 10px"><i class="fas fa-envelope"></i></div>
                         <div class="col">
-                            <input type="text" class="form-control" id="e" name="email" placeholder="Email Address">
+                            <input type="text" class="form-control" id="e" name="email" placeholder="Email Address" value="<?php if(isset($_COOKIE["member_login"])) { echo $_COOKIE["member_login"]; } ?>">
                         </div>
                     </div>
 
                     <div style="padding-top: 0px" class="row">
                         <div class="col-1" style="padding-top: 10px"><i class="fas fa-key"></i></div>
                         <div class="col">
-                            <input type="password" class="form-control" id="p" name="password" placeholder="Password">
+                            <input type="password" class="form-control" id="p" name="password" placeholder="Password" value="<?php if(isset($_COOKIE["member_password"])) { echo $_COOKIE["member_password"]; } ?>">
                         </div>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="remember" <?php if(isset($_COOKIE["member_login"])) { ?> checked <?php } ?>   >  REMEMBER ME
                     </div>
 
             </div>

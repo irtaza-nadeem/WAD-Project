@@ -174,9 +174,25 @@ function data_exits_or_not()
         }
         else
             {
-            header("location:../index.php");
-            echo"YOU have logged in successfully";
+                session_start();
+                if(!empty($_POST["remember"]))
+                {
+                    setcookie ("member_login",$email,time()+ (10 * 365 * 24 * 60 * 60));
+                    setcookie ("member_password",$password,time()+ (10 * 365 * 24 * 60 * 60));
+                    $_SESSION["admin_name"] = $email;
+                }
+
+                else {
+                    if (isset($_COOKIE["member_login"])) {
+                        setcookie("member_login", "");
+                    }
+                    if (isset($_COOKIE["member_password"])) {
+                        setcookie("member_password", "");
+                    }
+                }
+                header("location:../loginscreen.php");
             }
+
 
     }
 }
@@ -193,6 +209,8 @@ function forget_password()
     mail($email,"WELCOME TO RESERVEIT",$msg);
 
 }
+
+
 
 
 
